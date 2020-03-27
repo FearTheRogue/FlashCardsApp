@@ -7,10 +7,27 @@
              x:Class="Flash_Cards.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+        <Label Text="Welcome To chicken"
+               FontSize="Large"
+               HorizontalOptions="Fill"
+               VerticalOptions="StartAndExpand"
+               BackgroundColor="Red"/>
 
+        <Label Text="Flash Cards" 
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="Fill"
+               BackgroundColor="LightSkyBlue"/>
+        
+        <Label Text="In this App, test your knowledge on Chickens."
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               BackgroundColor="Yellow"/>
+        
+        <Button Text="Continue"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                BackgroundColor="Green"/>
+
+    </StackLayout>
 </ContentPage>
