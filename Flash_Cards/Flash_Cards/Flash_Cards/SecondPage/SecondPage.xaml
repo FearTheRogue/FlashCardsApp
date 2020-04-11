@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Second Page"
+             x:Class="Flash_Cards.SecondPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ADD CARDS"
+                     x:Name="AddButton"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ListView x:Name="MyList">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Header" TextColor="Blue" BackgroundColor="Green"
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                           Padding="40"/>
+                </StackLayout>
+            </ListView.Header>
+
+            <ListView.Footer>
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="Footer"  Text="Footer" TextColor="Blue" BackgroundColor="Red"
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                           Padding="40"/>
+                </StackLayout>
+            </ListView.Footer>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

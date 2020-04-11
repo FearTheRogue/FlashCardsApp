@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "MRPubEYkWopk8ioeBiQve+VmKiryOhKJmkIYrJEkoqfrJ0Y+bcN1lnORJct7RY5oPTpXp0v7Kq2NZKrAYoD4tQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.iOS\\Flash_Cards.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
+  ],
+  "logs": []
+}

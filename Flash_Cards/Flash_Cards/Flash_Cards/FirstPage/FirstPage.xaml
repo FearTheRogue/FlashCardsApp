@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="First Page"
+             x:Class="Flash_Cards.FirstPage">
+
+    <StackLayout>
+        <Label x:Name="HeaderText"
+               Text="Welcome Page"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand"
+               BackgroundColor="Red"/>
+
+        <Label Text="Flash Cards" 
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="Fill"
+               BackgroundColor="LightSkyBlue"/>
+        
+        <Label Text="In this App, test your knowledge on Chickens."
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               BackgroundColor="Yellow"/>
+
+        <Button x:Name="ContButton"
+                Text="Continue"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                BackgroundColor="Green" />
+    </StackLayout>
+</ContentPage>
