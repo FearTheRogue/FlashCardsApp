@@ -4,12 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Flash_Cards.MainPage">
+             Title="First Page"
+             x:Class="Flash_Cards.FirstPage">
 
     <StackLayout>
-        <Label Text="Welcome To chicken"
+        <Label x:Name="HeaderText"
+               Text="Welcome Page"
                FontSize="Large"
-               HorizontalOptions="Fill"
+               HorizontalOptions="Center"
                VerticalOptions="StartAndExpand"
                BackgroundColor="Red"/>
 
@@ -23,11 +25,11 @@
                HorizontalOptions="Center"
                VerticalOptions="Start"
                BackgroundColor="Yellow"/>
-        
-        <Button Text="Continue"
+
+        <Button x:Name="ContButton"
+                Text="Continue"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center"
-                BackgroundColor="Green"/>
-
+                BackgroundColor="Green" />
     </StackLayout>
 </ContentPage>

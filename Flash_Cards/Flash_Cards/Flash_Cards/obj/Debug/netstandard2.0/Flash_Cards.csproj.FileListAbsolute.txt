@@ -4,7 +4,6 @@ C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Card
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\Flash_Cards.pdb
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.csprojAssemblyReference.cache
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.csproj.CoreCompileInputs.cache
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.AssemblyInfoInputs.cache
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.AssemblyInfo.cs
@@ -12,3 +11,6 @@ C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Card
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ref\Flash_Cards.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.pdb
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\FirstPage\FirstPage.xaml.g.cs
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\SecondPage\SecondPage.xaml.g.cs
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ThirdPage\ThirdPage.xaml.g.cs

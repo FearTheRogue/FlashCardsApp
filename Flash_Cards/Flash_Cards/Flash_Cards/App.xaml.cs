@@ -10,7 +10,9 @@ namespace Flash_Cards
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            FirstPage firstPage = new FirstPage();
+
+            MainPage = new NavigationPage(firstPage);
         }
 
         protected override void OnStart()

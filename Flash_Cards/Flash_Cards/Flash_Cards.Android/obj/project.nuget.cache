@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eQhutPCS8slD6JpNqHYfytBhqOxi/prFaYfhOLx2sa1dnHB4Yiu3XfnGX4flMDt7IaYAADonJAII9u4HVhquaw==",
+  "dgSpecHash": "8cM7eLhfN0mbRrV9eI3YQG4PH6jXKN2Jmt4cr+YmjtiTuaZFK60MfDnqn3DO6eIyo0h7bz9IyrreEJux+rESOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
   "expectedPackageFiles": [
@@ -41,8 +41,8 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
-    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.essentials\\1.5.1\\xamarin.essentials.1.5.1.nupkg.sha512",
-    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
   ],
   "logs": []
 }
