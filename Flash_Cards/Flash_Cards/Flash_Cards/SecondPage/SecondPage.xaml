@@ -29,6 +29,9 @@
                            HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                            Padding="40"/>
+                    <Button x:Name="Add" Text="Add Button" TextColor="Black" BackgroundColor="Red" 
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                           Padding="40"/>
                 </StackLayout>
             </ListView.Footer>
         </ListView>

@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="AddCardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="SecondPage\SecondPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

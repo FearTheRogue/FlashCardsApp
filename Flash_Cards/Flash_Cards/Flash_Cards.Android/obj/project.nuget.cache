@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8cM7eLhfN0mbRrV9eI3YQG4PH6jXKN2Jmt4cr+YmjtiTuaZFK60MfDnqn3DO6eIyo0h7bz9IyrreEJux+rESOw==",
+  "dgSpecHash": "NgMb5fIYijC9MUt4+R5hZvJoazXMJKZpYhkL8ybXE3ni4WKXeW0a8LMNJRWWazz5U/KETtvmyizIi8V/0EbBxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
+  "projectFilePath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
@@ -41,8 +41,8 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
-    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
-    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
+    "C:\\Users\\Ryan\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\Ryan\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
   ],
   "logs": []
 }
