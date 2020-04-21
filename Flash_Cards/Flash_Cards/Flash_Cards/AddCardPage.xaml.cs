@@ -17,10 +17,11 @@ namespace Flash_Cards
         {
             InitializeComponent();
 
-            SaveCardButton.Clicked += SaveCardButton_Clicked;
+            //SaveCardButton.Clicked += SaveCardButton_Clicked;
             MyEntry.TextChanged += MyEntry_TextChanged;
         }
 
+        /*
         private async void SaveCardButton_Clicked(object sender, EventArgs e)
         {
             var MyEntry = new Entry { Text = "I am an Entry" };
@@ -28,7 +29,8 @@ namespace Flash_Cards
 
             SecondPage.AddNewCard(name);
             await Navigation.PopAsync();
-        }
+        } 
+        */
 
         private void MyEntry_TextChanged(object sender, TextChangedEventArgs e)
         {

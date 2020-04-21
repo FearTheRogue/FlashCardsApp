@@ -18,10 +18,10 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\ref\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\Flash_Cards.pdb
-C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.csprojAssemblyReference.cache
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\AddCardPage.xaml.g.cs
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\FirstPage\FirstPage.xaml.g.cs
-C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\SecondPage\SecondPage.xaml.g.cs
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\MainPage\SecondPage.xaml.g.cs
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\StartUP_Page\FirstPage.xaml.g.cs
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ThirdPage\ThirdPage.xaml.g.cs
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.csproj.CoreCompileInputs.cache
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.AssemblyInfoInputs.cache
@@ -30,4 +30,3 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ref\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.pdb
-C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\AddCardPage.xaml.g.cs
