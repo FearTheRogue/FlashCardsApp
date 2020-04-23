@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Flash_Cards"
+             mc:Ignorable="d"
+             Title="Second Page"
+             x:Class="Flash_Cards.MainPage"
+             x:Name="MainContentPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="ADD CARDS"
+                     x:Name="AddButton">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+            <Label Text="{Binding TitleString}"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   Padding="0,20,0,20"/>
+
+        <ListView ItemsSource="{Binding Cards}"
+                  x:Name="CardListView"
+                  SelectedItem="{Binding SelectedString}"
+                  HorizontalOptions="Center"
+                  HasUnevenRows="False"
+                  RowHeight="80"
+                  VerticalOptions="CenterAndExpand">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CardsViewCell>
+                        <local:CardsViewCell.ContextActions>
+                            <MenuItem Command="{Binding Source={x:Reference MainContentPage}, Path=BindingContext.DeleteCommand}"
+                                      CommandParameter="{Binding .}"
+                                      Text="Delete"
+                                      IsDestructive="True"/>
+                        </local:CardsViewCell.ContextActions>
+                    </local:CardsViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>

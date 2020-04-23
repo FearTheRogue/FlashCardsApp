@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Flash_Cards.AddCardPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"
+                     x:Name="SaveCardButton"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Create a new catagory"
+                   FontSize="30"
+                   VerticalOptions="Start" 
+                   HorizontalOptions="CenterAndExpand" 
+                   Padding="0,20,0,20"/>
+
+            <StackLayout Orientation="Horizontal" Padding="0,0,0,20" BackgroundColor="Red">
+
+                <Label Text="Title: "
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       FontSize="25"
+                       BackgroundColor="Green"
+                       Padding="20,0,10,0"/>
+
+                <Entry x:Name="MyEntry"
+                       FontSize="25"
+                       Placeholder="Enter new Title"
+                       VerticalOptions="Center"
+                       HorizontalOptions="FillAndExpand"
+                       BackgroundColor="Yellow">
+                </Entry>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

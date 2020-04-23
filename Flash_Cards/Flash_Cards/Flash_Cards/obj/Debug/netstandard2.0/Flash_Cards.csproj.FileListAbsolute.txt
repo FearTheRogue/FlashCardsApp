@@ -11,9 +11,6 @@ C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Card
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ref\Flash_Cards.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.pdb
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\FirstPage\FirstPage.xaml.g.cs
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\SecondPage\SecondPage.xaml.g.cs
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ThirdPage\ThirdPage.xaml.g.cs
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\Flash_Cards.deps.json
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\bin\Debug\netstandard2.0\ref\Flash_Cards.dll
@@ -30,3 +27,8 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\ref\Flash_Cards.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\Flash_Cards.pdb
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\0 - StartUpPage\StartUpPage.xaml.g.cs
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\1 - MainPage\MainPage.xaml.g.cs
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\2 - ThirdPage\ThirdPage.xaml.g.cs
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\4 - AddCardPage\AddCardPage.xaml.g.cs
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards\obj\Debug\netstandard2.0\CardsViewCell.xaml.g.cs
