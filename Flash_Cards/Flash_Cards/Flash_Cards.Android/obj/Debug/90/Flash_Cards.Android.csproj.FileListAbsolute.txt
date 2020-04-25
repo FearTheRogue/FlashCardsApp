@@ -482,6 +482,11 @@ C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Card
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories.png
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\starburst.png
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\bg_01.png
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories_01.png
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories_02.png
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\bin\Debug\Flash_Cards.Android.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\bin\Debug\Flash_Cards.Android.pdb
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\bin\Debug\com.companyname.flash_cards.apk
@@ -547,6 +552,11 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories.png
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\starburst.png
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\bg_01.png
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories_01.png
+C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories_02.png
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\uploadflags.txt
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\android\assets\Flash_Cards.Android.dll
@@ -966,8 +976,3 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories.png
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\starburst.png
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\bg_01.png
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories_01.png
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\Flash_Cards\Flash_Cards.Android\obj\Debug\90\res\drawable\cardagories_02.png

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FJj3loo+3lJpnscUiY4TVwVkrfTNurI1GCLCp2z540AFvGNn1J3DOWdrgwQHN1mYYuT3lHAND/rdIv2iml4tHA==",
+  "dgSpecHash": "gRyspGXUAFzlyHG1GeHnPhTb9+2ptEy2PSaKCp+hEyNXqbjx784zaLo0/RJsLhA5XQkDGTbl0gXNSofn+/tTEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.iOS\\Flash_Cards.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.iOS\\Flash_Cards.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.essentials\\1.5.3.1\\xamarin.essentials.1.5.3.1.nupkg.sha512",
-    "C:\\Users\\coypu\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
+    "C:\\Users\\Ryan\\.nuget\\packages\\xamarin.essentials\\1.5.3.1\\xamarin.essentials.1.5.3.1.nupkg.sha512",
+    "C:\\Users\\Ryan\\.nuget\\packages\\xamarin.forms\\4.5.0.617\\xamarin.forms.4.5.0.617.nupkg.sha512"
   ],
   "logs": []
 }

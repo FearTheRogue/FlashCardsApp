@@ -22,7 +22,7 @@ namespace Flash_Cards
             CardListView.ItemSelected += CardListView_ItemSelectedAsync;
 
             AddButton.Clicked += AddButton_ClickedAsync;
-
+            AddButtonCard.Clicked += AddButtonCard_ClickedAsync;
             //DataTemplate dataTemplate = new DataTemplate(() =>
             //{
             //    TextCell cell = new TextCell();
@@ -65,6 +65,11 @@ namespace Flash_Cards
         public async void AddButton_ClickedAsync(object sender, System.EventArgs e)
         {
             await vm.AddCardButtonAsync();
+        }
+
+        public void AddButtonCard_ClickedAsync(object sender, System.EventArgs e)
+        {
+            vm.Cards.Add(new CustomCell("New",0));
         }
 
         public void AddNewCard(CustomCell newCard)

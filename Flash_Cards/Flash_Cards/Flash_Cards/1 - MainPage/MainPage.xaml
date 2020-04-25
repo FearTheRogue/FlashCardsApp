@@ -16,7 +16,7 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-            <Label Text="{Binding TitleString}"
+        <Label Text="{Binding TitleString}"
                    FontSize="30"
                    HorizontalOptions="Center"
                    VerticalOptions="StartAndExpand"
@@ -28,7 +28,10 @@
                   HorizontalOptions="Center"
                   HasUnevenRows="False"
                   RowHeight="80"
-                  VerticalOptions="CenterAndExpand">
+                  VerticalOptions="CenterAndExpand"
+                  IsPullToRefreshEnabled="True"
+                  RefreshCommand="{Binding RefreshCommand}"
+                  IsRefreshing="{Binding IsRefreshing}">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -43,7 +46,13 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
+        
+        <Button x:Name="AddButtonCard"
+                Text="Add"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"/>
+        
+        
     </StackLayout>
 
 </ContentPage>

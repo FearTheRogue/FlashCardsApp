@@ -15,7 +15,6 @@ namespace Flash_Cards
         private CustomCell _selectedString;
         private int _selectedRow = 0;
      
-
         public ObservableCollection<CustomCell> Cards
         {
             get => _cards;
@@ -74,21 +73,60 @@ namespace Flash_Cards
         public void AddNewCard(CustomCell newCardString)
         {
             Cards.Add(newCardString);
+
+            Cards = null;
+            Cards = _cards;
         }
 
         public async Task AddCardButtonAsync()
         {
             //Cards.Add("New");
 
+
+
             var addPage = new AddCardPage();
             await Navigation.PushAsync(addPage);
 
             //await _viewHelper.TextPopup("Nice", "Button Clicked");
         }
-
+        
         public ICommand DeleteCommand { get; private set; }
 
-        public void DeleteItem(CustomCell c) => Cards.Remove(c);
+        public void DeleteItem(CustomCell c) => Cards.Remove(c);  
+        
+        private bool _isRefreshing = false;
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                OnPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+
+
+        public ICommand RefreshCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    IsRefreshing = true;
+
+                    Cards = _cards;
+
+                    IsRefreshing = false;
+                });
+            }
+        }
+
+        private void RefreshData()
+        {
+
+           // Cards = null;
+            Cards = _cards;
+        }
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
@@ -107,6 +145,7 @@ namespace Flash_Cards
             };
 
             DeleteCommand = new Command<CustomCell>(execute: (c) => DeleteItem(c));
+          //  RefreshCommand = new Command<CustomCell>(execute: () => ());
         }
     }
 }

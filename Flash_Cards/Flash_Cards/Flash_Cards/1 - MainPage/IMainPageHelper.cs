@@ -7,6 +7,6 @@ namespace Flash_Cards
     {
         Task TextPopup(string title, string message);
 
-        //void ScrollToObject(object obj);
+       // void ScrollToObject(object obj);
     }
 }

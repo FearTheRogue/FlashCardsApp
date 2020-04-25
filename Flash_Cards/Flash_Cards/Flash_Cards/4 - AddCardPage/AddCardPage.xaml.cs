@@ -6,39 +6,50 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.ObjectModel;
+using MVVMBase;
 
 namespace Flash_Cards
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddCardPage : ContentPage
+    public partial class AddCardPage : ContentPage, IMainPageHelper
     {
-        private string name;
+        private readonly MainPage vvm;
 
         public AddCardPage()
         {
             InitializeComponent();
 
+            vvm = new MainPage();
+            BindingContext = vvm;
+
             SaveCardButton.Clicked += SaveCardButton_Clicked;
-            //MyEntry.TextChanged += MyEntry_TextChanged;
+            
+        }
+
+        INavigation IPage.NavigationProxy => Navigation;
+
+        public async Task TextPopup(string title, string message)
+        {
+            await DisplayAlert(title, message, "Dismiss");
         }
 
         private async void SaveCardButton_Clicked(object sender, EventArgs e)
-        {
-            var MyEntry = new Entry { Text = "I am an Entry" };
-            string text = MyEntry.Text;
+        { 
+            String text =(MyEntry.Text);
 
-            //SecondPage.AddNewCard(name);
-            //await Navigation.PopAsync();
+            //vvm.Cards.Add(new CustomCell(text,0));
 
-            //System.Console.WriteLine(name);
-           //MainPage.Add
-            //await Navigation.PopAsync();
+            vvm.Add();
+
+            var tempMainPage = new MainPage();
+            await Navigation.PushAsync(tempMainPage);
         } 
 
         private void MyEntry_TextChanged(object sender, TextChangedEventArgs e)
         {
             //labelTemp.Text = MyEntry.Text;
-            name = e.NewTextValue;
+            //name = e.NewTextValue;
         }
     }
 }
