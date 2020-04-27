@@ -39,11 +39,9 @@ namespace Flash_Cards
             String text =(MyEntry.Text);
 
             //vvm.Cards.Add(new CustomCell(text,0));
-
-            vvm.Add();
-
-            var tempMainPage = new MainPage();
-            await Navigation.PushAsync(tempMainPage);
+            MessagingCenter.Send<>;
+         
+            Navigation.PopAsync();
         } 
 
         private void MyEntry_TextChanged(object sender, TextChangedEventArgs e)
