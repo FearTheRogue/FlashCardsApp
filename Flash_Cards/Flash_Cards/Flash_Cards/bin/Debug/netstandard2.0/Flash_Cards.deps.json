@@ -11,7 +11,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.5.3.1",
-          "Xamarin.Forms": "4.5.0.617"
+          "Xamarin.Forms": "4.5.0.657"
         },
         "runtime": {
           "Flash_Cards.dll": {}
@@ -42,19 +42,19 @@
           }
         }
       },
-      "Xamarin.Forms/4.5.0.617": {
+      "Xamarin.Forms/4.5.0.657": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.5.0.216"
+            "fileVersion": "4.5.0.219"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.5.0.216"
+            "fileVersion": "4.5.0.219"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.5.0.216"
+            "fileVersion": "4.5.0.219"
           }
         }
       }
@@ -94,12 +94,12 @@
       "path": "xamarin.essentials/1.5.3.1",
       "hashPath": "xamarin.essentials.1.5.3.1.nupkg.sha512"
     },
-    "Xamarin.Forms/4.5.0.617": {
+    "Xamarin.Forms/4.5.0.657": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tB/h7bHEylOgNT+521SRnbmO+LCe5R3lPboD/icCMpa+FdjmxhZQ7+fIIPFDbhY2dqYetGRnAeJWXVx4NLbmAw==",
-      "path": "xamarin.forms/4.5.0.617",
-      "hashPath": "xamarin.forms.4.5.0.617.nupkg.sha512"
+      "sha512": "sha512-S6WmhCKBRDMG5woHEIRA8MBZv6yn2jZ8Kf9DzzcOuB5gXivH1S5mIiSt4yoaa9HwfNUcg2d7AH2GEoICmH5bJg==",
+      "path": "xamarin.forms/4.5.0.657",
+      "hashPath": "xamarin.forms.4.5.0.657.nupkg.sha512"
     }
   }
 }

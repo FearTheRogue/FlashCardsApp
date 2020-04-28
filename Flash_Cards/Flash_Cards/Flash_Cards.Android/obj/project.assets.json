@@ -756,7 +756,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.5.0.617": {
+      "Xamarin.Forms/4.5.0.657": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.CustomTabs": "28.0.0.3",
@@ -789,7 +789,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Xamarin.Essentials": "1.5.3.1",
-          "Xamarin.Forms": "4.5.0.617"
+          "Xamarin.Forms": "4.5.0.657"
         },
         "compile": {
           "bin/placeholder/Flash_Cards.dll": {}
@@ -1603,10 +1603,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.5.0.617": {
-      "sha512": "tB/h7bHEylOgNT+521SRnbmO+LCe5R3lPboD/icCMpa+FdjmxhZQ7+fIIPFDbhY2dqYetGRnAeJWXVx4NLbmAw==",
+    "Xamarin.Forms/4.5.0.657": {
+      "sha512": "S6WmhCKBRDMG5woHEIRA8MBZv6yn2jZ8Kf9DzzcOuB5gXivH1S5mIiSt4yoaa9HwfNUcg2d7AH2GEoICmH5bJg==",
       "type": "package",
-      "path": "xamarin.forms/4.5.0.617",
+      "path": "xamarin.forms/4.5.0.657",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1911,7 +1911,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.5.0.617.nupkg.sha512",
+        "xamarin.forms.4.5.0.657.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -1925,28 +1925,28 @@
     "MonoAndroid,Version=v9.0": [
       "Flash_Cards >= 1.0.0",
       "Xamarin.Essentials >= 1.5.3.1",
-      "Xamarin.Forms >= 4.5.0.617"
+      "Xamarin.Forms >= 4.5.0.657"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ryan\\.nuget\\packages\\": {},
+    "C:\\Users\\coypu\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
+      "projectUniqueName": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
       "projectName": "Flash_Cards.Android",
-      "projectPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
-      "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\obj\\",
+      "projectPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
+      "packagesPath": "C:\\Users\\coypu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\coypu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1960,8 +1960,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj": {
-              "projectPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj"
+            "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj": {
+              "projectPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj"
             }
           }
         }
@@ -1976,7 +1976,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.5.0.617, )"
+            "version": "[4.5.0.657, )"
           }
         }
       }

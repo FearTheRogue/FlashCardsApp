@@ -46,13 +46,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        <Button x:Name="AddButtonCard"
-                Text="Add"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="CenterAndExpand"/>
-        
-        
     </StackLayout>
-
 </ContentPage>

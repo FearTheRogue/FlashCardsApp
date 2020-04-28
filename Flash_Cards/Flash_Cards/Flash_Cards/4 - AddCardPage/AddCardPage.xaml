@@ -30,7 +30,7 @@
                        BackgroundColor="Green"
                        Padding="20,0,10,0"/>
 
-                <Entry x:Name="MyEntry"
+                <Entry x:Name="CatagoryTitle"
                        FontSize="25"
                        Placeholder="Enter new Title"
                        VerticalOptions="Center"

@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Windows.Input;
@@ -62,9 +61,6 @@ namespace Flash_Cards
 
         public async Task ItemSelectionChangedAsync (int row, CustomCell card)
         {
-            //SelectedRow = row;
-            //await _viewHelper.TextPopup("Selected Card: ", $"{card.Catagory} on row {row}");
-            
             var nextPage = new ThirdPage();
             await Navigation.PushAsync(nextPage);
             nextPage.Title = card.Catagory + " " + $"on row {row}";
@@ -73,60 +69,18 @@ namespace Flash_Cards
         public void AddNewCard(CustomCell newCardString)
         {
             Cards.Add(newCardString);
-
-            Cards = null;
-            Cards = _cards;
+            _viewHelper.ScrollToObject(newCardString);
         }
 
         public async Task AddCardButtonAsync()
         {
-            //Cards.Add("New");
-
-
-
             var addPage = new AddCardPage();
             await Navigation.PushAsync(addPage);
-
-            //await _viewHelper.TextPopup("Nice", "Button Clicked");
         }
         
         public ICommand DeleteCommand { get; private set; }
 
         public void DeleteItem(CustomCell c) => Cards.Remove(c);  
-        
-        private bool _isRefreshing = false;
-        public bool IsRefreshing
-        {
-            get { return _isRefreshing; }
-            set
-            {
-                _isRefreshing = value;
-                OnPropertyChanged(nameof(IsRefreshing));
-            }
-        }
-
-
-        public ICommand RefreshCommand
-        {
-            get
-            {
-                return new Command(() =>
-                {
-                    IsRefreshing = true;
-
-                    Cards = _cards;
-
-                    IsRefreshing = false;
-                });
-            }
-        }
-
-        private void RefreshData()
-        {
-
-           // Cards = null;
-            Cards = _cards;
-        }
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
@@ -145,7 +99,6 @@ namespace Flash_Cards
             };
 
             DeleteCommand = new Command<CustomCell>(execute: (c) => DeleteItem(c));
-          //  RefreshCommand = new Command<CustomCell>(execute: () => ());
         }
     }
 }

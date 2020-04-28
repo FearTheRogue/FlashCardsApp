@@ -10,6 +10,7 @@ namespace Flash_Cards
     public partial class MainPage : ContentPage, IMainPageHelper
     {
         private readonly MainPageViewModel vm;
+        private IMainPageHelper _viewHelper;
 
         public MainPage()
         {
@@ -22,27 +23,15 @@ namespace Flash_Cards
             CardListView.ItemSelected += CardListView_ItemSelectedAsync;
 
             AddButton.Clicked += AddButton_ClickedAsync;
-            AddButtonCard.Clicked += AddButtonCard_ClickedAsync;
-            //DataTemplate dataTemplate = new DataTemplate(() =>
-            //{
-            //    TextCell cell = new TextCell();
 
-            //    MenuItem m1 = new MenuItem
-            //    {
-            //        Text = "Delete",
-            //        IsDestructive = true
-            //    };
+            MessagingCenter.Subscribe<AddCardPage, string>(this, "new", (sender, e) =>
+            {
+                DisplayAlert("Yay! New Catagory", e + " has been Added", "Ok");
+                CustomCell newCard = new CustomCell(e, 0);
 
-            //    m1.SetBinding(MenuItem.CommandProperty, new Binding("DeleteCommand", source: this.BindingContext));
-            //    m1.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
-            //    cell.ContextActions.Add(m1);
-            //    return cell;
-            //});
-
-            //dataTemplate.SetBinding(TextCell.TextProperty, "Catagory");
-            //dataTemplate.SetBinding(TextCell.DetailProperty, "CardCount");
-
-            //CardListView.ItemTemplate = dataTemplate;
+                vm.AddNewCard(newCard);
+                //_viewHelper.ScrollToObject(newCard);
+            });
         }
 
         private async void CardListView_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
@@ -67,14 +56,9 @@ namespace Flash_Cards
             await vm.AddCardButtonAsync();
         }
 
-        public void AddButtonCard_ClickedAsync(object sender, System.EventArgs e)
+        public void ScrollToObject(object obj)
         {
-            vm.Cards.Add(new CustomCell("New",0));
-        }
-
-        public void AddNewCard(CustomCell newCard)
-        {
-            vm.AddNewCard(newCard);
+            CardListView.ScrollTo(obj, ScrollToPosition.End, true);
         }
     }
 }

@@ -12,13 +12,10 @@ namespace Flash_Cards
         public FirstPage()
         {
             InitializeComponent();
-
-            //ContButton.Clicked += ContButton_Clicked;
         }
 
         private async void ContButton_Clicked(object sender, EventArgs e)
         {
-            //ContButton.Text = "Button Is Clicked";
             var nextPage = new MainPage();
             await Navigation.PushAsync(nextPage, true);
         }
