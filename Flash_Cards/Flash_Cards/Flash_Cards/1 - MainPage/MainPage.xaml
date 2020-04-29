@@ -22,27 +22,24 @@
                    VerticalOptions="StartAndExpand"
                    Padding="0,20,0,20"/>
 
-        <ListView ItemsSource="{Binding Cards}"
-                  x:Name="CardListView"
+        <ListView ItemsSource="{Binding CatagoryCards}"
+                  x:Name="CatagoryListView"
                   SelectedItem="{Binding SelectedString}"
                   HorizontalOptions="Center"
                   HasUnevenRows="False"
                   RowHeight="80"
-                  VerticalOptions="CenterAndExpand"
-                  IsPullToRefreshEnabled="True"
-                  RefreshCommand="{Binding RefreshCommand}"
-                  IsRefreshing="{Binding IsRefreshing}">
+                  VerticalOptions="CenterAndExpand">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <local:CardsViewCell>
-                        <local:CardsViewCell.ContextActions>
+                    <local:CatagoryViewCell>
+                        <local:CatagoryViewCell.ContextActions>
                             <MenuItem Command="{Binding Source={x:Reference MainContentPage}, Path=BindingContext.DeleteCommand}"
                                       CommandParameter="{Binding .}"
                                       Text="Delete"
                                       IsDestructive="True"/>
-                        </local:CardsViewCell.ContextActions>
-                    </local:CardsViewCell>
+                        </local:CatagoryViewCell.ContextActions>
+                    </local:CatagoryViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

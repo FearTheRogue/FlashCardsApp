@@ -19,29 +19,30 @@ namespace Flash_Cards
             vm = new MainPageViewModel(this);
             BindingContext = vm;
 
-            CardListView.SelectionMode = ListViewSelectionMode.Single;
-            CardListView.ItemSelected += CardListView_ItemSelectedAsync;
+            CatagoryListView.SelectionMode = ListViewSelectionMode.Single;
+            CatagoryListView.ItemSelected += Catagory_ItemSelectedAsync;
 
             AddButton.Clicked += AddButton_ClickedAsync;
 
             MessagingCenter.Subscribe<AddCardPage, string>(this, "new", (sender, e) =>
             {
                 DisplayAlert("Yay! New Catagory", e + " has been Added", "Ok");
-                CustomCell newCard = new CustomCell(e, 0);
+                CatagoryCell newCard = new CatagoryCell(e, 0);
 
                 vm.AddNewCard(newCard);
                 //_viewHelper.ScrollToObject(newCard);
             });
         }
 
-        private async void CardListView_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
+        private async void Catagory_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null) return;
 
-            CustomCell itemString = (CustomCell)e.SelectedItem;
+            CatagoryCell itemString = (CatagoryCell)e.SelectedItem;
             int selectedRow = e.SelectedItemIndex;
 
-            await vm.ItemSelectionChangedAsync(row: selectedRow, card: itemString);
+            //await vm.ItemSelectionChangedAsync(row: selectedRow, card: itemString);
+            await vm.ItemSelectionChangedAsync(card: itemString);
         }
 
         INavigation IPage.NavigationProxy => Navigation;
@@ -58,7 +59,7 @@ namespace Flash_Cards
 
         public void ScrollToObject(object obj)
         {
-            CardListView.ScrollTo(obj, ScrollToPosition.End, true);
+            CatagoryListView.ScrollTo(obj, ScrollToPosition.End, true);
         }
     }
 }

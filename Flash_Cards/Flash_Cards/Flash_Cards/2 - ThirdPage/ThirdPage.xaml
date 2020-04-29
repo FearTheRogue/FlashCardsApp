@@ -1,10 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Flash_Cards"
              mc:Ignorable="d"
-             x:Class="Flash_Cards.ThirdPage">
+             x:Class="Flash_Cards.ThirdPage"
+             x:Name="CardContentPage">
+    
     <ContentPage.Content>
         <StackLayout>
 
@@ -13,7 +16,43 @@
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand" 
                    Padding="0,20,0,20"/>
-
+            
+            <Label Text="row"
+                   FontSize="20"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"/>
+                
+            <ListView ItemsSource="{Binding QuestionCards}"
+                      x:Name="CardListView"
+                      HorizontalOptions="Center"
+                      HasUnevenRows="False"
+                      RowHeight="80"
+                      VerticalOptions="CenterAndExpand"
+                      IsPullToRefreshEnabled="True">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:CardViewCell>
+                            <local:CardViewCell.ContextActions>
+                                      <MenuItem Command="{Binding Source={x:Reference CardContentPage}, Path=BindingContext.DeleteCommand}"
+                                      CommandParameter="{Binding .}"
+                                      Text="Delete Card"
+                                      IsDestructive="True"/>
+                            </local:CardViewCell.ContextActions>
+                        </local:CardViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                
+            <StackLayout Orientation="Vertical">
+                
+                <Label Text="Title"
+                       FontSize="20"
+                       VerticalOptions="Start"
+                       HorizontalOptions="CenterAndExpand"/>
+                
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

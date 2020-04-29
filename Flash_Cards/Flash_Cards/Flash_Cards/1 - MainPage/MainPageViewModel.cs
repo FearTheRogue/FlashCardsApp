@@ -9,18 +9,18 @@ namespace Flash_Cards
     public class MainPageViewModel : ViewModelBase
     {
         private IMainPageHelper _viewHelper;
-        private ObservableCollection<CustomCell> _cards;
+        private ObservableCollection<CatagoryCell> _catagory;
         private string _titleString = "Nothing Selected";
-        private CustomCell _selectedString;
+        private CatagoryCell _selectedString;
         private int _selectedRow = 0;
      
-        public ObservableCollection<CustomCell> Cards
+        public ObservableCollection<CatagoryCell> CatagoryCards
         {
-            get => _cards;
+            get => _catagory;
             set
             {
-                if (_cards == value) return;
-                _cards = value;
+                if (_catagory == value) return;
+                _catagory = value;
                 OnPropertyChanged();
             }
         }
@@ -36,7 +36,7 @@ namespace Flash_Cards
             }
         }
 
-        public CustomCell SelectedString 
+        public CatagoryCell SelectedString 
         {
             get => _selectedString;
             set
@@ -59,16 +59,16 @@ namespace Flash_Cards
             }
         }
 
-        public async Task ItemSelectionChangedAsync (int row, CustomCell card)
+        public async Task ItemSelectionChangedAsync (CatagoryCell card)
         {
             var nextPage = new ThirdPage();
             await Navigation.PushAsync(nextPage);
-            nextPage.Title = card.Catagory + " " + $"on row {row}";
+            nextPage.Title = card.Catagory + " Catagory Page";
         }
 
-        public void AddNewCard(CustomCell newCardString)
+        public void AddNewCard(CatagoryCell newCardString)
         {
-            Cards.Add(newCardString);
+            CatagoryCards.Add(newCardString);
             _viewHelper.ScrollToObject(newCardString);
         }
 
@@ -80,25 +80,25 @@ namespace Flash_Cards
         
         public ICommand DeleteCommand { get; private set; }
 
-        public void DeleteItem(CustomCell c) => Cards.Remove(c);  
+        public void DeleteItem(CatagoryCell c) => CatagoryCards.Remove(c);  
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
             _viewHelper = viewHelper;
 
-            Cards = new ObservableCollection<CustomCell>()
+            CatagoryCards = new ObservableCollection<CatagoryCell>()
             {
-                new CustomCell("SOFT262", 4),
-                new CustomCell("AINT255", 4),
-                new CustomCell("Dinosaurs", 4),
-                new CustomCell("Food ", 4),
-                new CustomCell("Netflix", 4),
-                new CustomCell("Sport", 4),
-                new CustomCell("Oop", 4)
+                new CatagoryCell("SOFT262", 4),
+                new CatagoryCell("AINT255", 4),
+                new CatagoryCell("Dinosaurs", 4),
+                new CatagoryCell("Food ", 4),
+                new CatagoryCell("Netflix", 4),
+                new CatagoryCell("Sport", 4),
+                new CatagoryCell("Oop", 4)
 
             };
 
-            DeleteCommand = new Command<CustomCell>(execute: (c) => DeleteItem(c));
+            DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));
         }
     }
 }
