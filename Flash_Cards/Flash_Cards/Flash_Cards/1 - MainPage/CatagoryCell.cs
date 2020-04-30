@@ -6,6 +6,21 @@
 
         public int CardCount { get; set; }
 
-        public CatagoryCell(string Cata, int _Count) => (Catagory, CardCount) = (Cata, _Count);
+        public CatagoryCell(string _catagory, int _Count) => (Catagory, CardCount) = (_catagory, _Count);
+
+        public Question[] Questions { get; set; }
+        public Answer[] Answers { get; set; }
+
+        public CatagoryCell(string _catagory, string _question, string _answer) => (Catagory, Questions, Answers) = (_catagory, _question, _answer);
+    }
+
+    public class Question
+    {
+        public string CardQuestion { get; set; }
+    }
+
+    public class Answer
+    {
+        public string CardAnswer { get; set; }
     }
 }

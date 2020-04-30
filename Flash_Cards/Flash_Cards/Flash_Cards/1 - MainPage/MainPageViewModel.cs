@@ -8,8 +8,8 @@ namespace Flash_Cards
 {
     public class MainPageViewModel : ViewModelBase
     {
-        private IMainPageHelper _viewHelper;
-        private ObservableCollection<CatagoryCell> _catagory;
+        private readonly IMainPageHelper _viewHelper;
+        public ObservableCollection<CatagoryCell> _catagory;
         private string _titleString = "Nothing Selected";
         private CatagoryCell _selectedString;
         private int _selectedRow = 0;
@@ -19,7 +19,7 @@ namespace Flash_Cards
             get => _catagory;
             set
             {
-                if (_catagory == value) return;
+                if (_catagory == value)  { return;  }
                 _catagory = value;
                 OnPropertyChanged();
             }
@@ -80,22 +80,45 @@ namespace Flash_Cards
         
         public ICommand DeleteCommand { get; private set; }
 
-        public void DeleteItem(CatagoryCell c) => CatagoryCards.Remove(c);  
+        public void DeleteItem(CatagoryCell c)  { CatagoryCards.Remove(c); }
+
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
             _viewHelper = viewHelper;
 
-            CatagoryCards = new ObservableCollection<CatagoryCell>()
+            CatagoryCell catagoryCell = new CatagoryCell()
             {
-                new CatagoryCell("SOFT262", 4),
+                Catagory = "SOFT262",
+                CardCount = 2,
+                Questions = new Question[]
+                {
+                    new Question{CardQuestion = "SOFT262 question 1"},
+                    new Question{CardQuestion = "SOFT262 question 2"}
+                },
+                Answers = new Answer[]
+                {
+                    new Answer{CardAnswer = "SOFT262 answer 1"},
+                    new Answer{CardAnswer = "SOFT262 answer 2"},
+                },
+            };
+
+            CatagoryCards = new ObservableCollection<CatagoryCell>()
+            { 
+                /*new CatagoryCell("SOFT262", 4),
                 new CatagoryCell("AINT255", 4),
                 new CatagoryCell("Dinosaurs", 4),
                 new CatagoryCell("Food ", 4),
                 new CatagoryCell("Netflix", 4),
                 new CatagoryCell("Sport", 4),
                 new CatagoryCell("Oop", 4)
-
+                */
+                //new CatagoryCell("SOFT262", "question 1","answer 1"),
+                //new CatagoryCell("AINT255", "question 2", "answer 2"),
+                //new CatagoryCell("Dinosaurs", "question 3", "answer 3"),
+                //new CatagoryCell("Food", "question 4", "answer 4"),
+                new CatagoryCell("Netflix", "question 5", "answer 5"),
+                new CatagoryCell("",0)
             };
 
             DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));

@@ -30,7 +30,6 @@ C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\bin\Debug\netcoreapp3.
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Private.ServiceModel.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Private.ServiceModel.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.csprojAssemblyReference.cache
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.csproj.CoreCompileInputs.cache
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.AssemblyInfoInputs.cache
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.AssemblyInfo.cs
@@ -38,3 +37,4 @@ C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.dll
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.pdb
 C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.genruntimeconfig.cache
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Setup\Setup\obj\Debug\netcoreapp3.1\Setup.csprojAssemblyReference.cache

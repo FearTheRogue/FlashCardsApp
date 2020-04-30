@@ -21,9 +21,9 @@
                    FontSize="20"
                    VerticalOptions="Start"
                    HorizontalOptions="CenterAndExpand"/>
-                
-            <ListView ItemsSource="{Binding QuestionCards}"
-                      x:Name="CardListView"
+
+            <ListView ItemsSource="{Binding CatagoryCards}"
+                      x:Name="CatagoryListView"
                       HorizontalOptions="Center"
                       HasUnevenRows="False"
                       RowHeight="80"

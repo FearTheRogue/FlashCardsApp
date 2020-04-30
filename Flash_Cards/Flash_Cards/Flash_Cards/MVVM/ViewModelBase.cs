@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using Flash_Cards;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
