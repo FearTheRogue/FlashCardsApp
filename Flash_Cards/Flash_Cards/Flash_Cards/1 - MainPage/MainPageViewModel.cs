@@ -87,6 +87,7 @@ namespace Flash_Cards
         {
             _viewHelper = viewHelper;
 
+            /*
             CatagoryCell catagoryCell = new CatagoryCell()
             {
                 Catagory = "SOFT262",
@@ -102,6 +103,7 @@ namespace Flash_Cards
                     new Answer{CardAnswer = "SOFT262 answer 2"},
                 },
             };
+            */
 
             CatagoryCards = new ObservableCollection<CatagoryCell>()
             { 

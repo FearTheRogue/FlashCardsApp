@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj": {}
+    "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj": {}
   },
   "projects": {
-    "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj": {
+    "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj",
+        "projectUniqueName": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj",
         "projectName": "Setup",
-        "projectPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj",
-        "packagesPath": "C:\\Users\\coypu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\obj\\",
+        "projectPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\Setup.csproj",
+        "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Setup\\Setup\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\coypu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

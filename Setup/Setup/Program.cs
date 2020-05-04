@@ -185,6 +185,36 @@ namespace Setup
                 ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory2, new PartitionKey(cardCatagory2.Catagory));
                 Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
             }
+
+            CardCatagories cardCatagory3 = new CardCatagories
+            {
+                Id = "catagory.3",
+                Catagory = "OOP",
+                CardCount = 3,
+                Questions = new Question[]
+                {
+                    new Question{CardQuestion = "OOP question 1"},
+                    new Question{CardQuestion = "OOP question 2"},
+                    new Question{CardQuestion = "OOP question 3"}
+                },
+                Answers = new Answer[]
+                {
+                    new Answer{CardAnwser = "OOP answer 1"},
+                    new Answer{CardAnwser = "OOP answer 2"},
+                    new Answer{CardAnwser = "OOP answer 3"}
+                },
+            };
+
+            try
+            {
+                ItemResponse<CardCatagories> cardCatagory3Response = await this.container.ReadItemAsync<CardCatagories>(cardCatagory3.Id, new PartitionKey(cardCatagory3.Catagory));
+                Console.WriteLine("Item in database with id: {0} already exists\n", cardCatagory3Response.Resource.Id);
+            }
+            catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory3, new PartitionKey(cardCatagory3.Catagory));
+                Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
+            }
         }
 
         private async Task QueryItemsAsync()
