@@ -1,10 +1,10 @@
-﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using System.Windows.Input;
-using MVVMBase;
+﻿using MVVMBase;
 using MyAzureLib;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace Flash_Cards
 {
@@ -86,6 +86,13 @@ namespace Flash_Cards
 
         public void DeleteItem(CatagoryCell c)  { CatagoryCards.Remove(c); }
 
+        public async Task Temp()
+        {
+            List<MyAzureLib.CardCatagories> list = new List<MyAzureLib.CardCatagories>();
+
+            await AzureLibrary.QueryItemsAsync();
+
+        }
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
@@ -94,7 +101,7 @@ namespace Flash_Cards
             AzureLibrary = new AzureLibrary();
 
 
-
+            Temp();
             /*
             CatagoryCell catagoryCell = new CatagoryCell()
             {
@@ -132,13 +139,6 @@ namespace Flash_Cards
             //};
 
             DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));
-        }
-
-        public async Task GetCatagories()
-        {
-            CatagoryCards = CardCatagories();
-
-            await AzureLibrary.QueryItemsAsync(CardCatagories card);
         }
     }
 }
