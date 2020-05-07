@@ -5,9 +5,14 @@ public class MonoPackageManager_Resources {
 		"Flash_Cards.Android.dll",
 		"Flash_Cards.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.Azure.Cosmos.Client.dll",
 		"Microsoft.Azure.DocumentDB.Core.dll",
 		"Newtonsoft.Json.dll",
 		"System.Collections.Immutable.dll",
+		"System.Configuration.ConfigurationManager.dll",
+		"System.Security.AccessControl.dll",
+		"System.Security.Permissions.dll",
+		"System.Security.Principal.Windows.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
@@ -50,6 +55,10 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
+		"MyAzureLib.dll",
+		"Microsoft.Azure.Cosmos.Direct.dll",
+		"Microsoft.Azure.Cosmos.Serialization.HybridRow.dll",
+		"Microsoft.Azure.Cosmos.Core.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

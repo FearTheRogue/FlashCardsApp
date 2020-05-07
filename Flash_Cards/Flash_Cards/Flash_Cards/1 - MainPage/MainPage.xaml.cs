@@ -10,6 +10,8 @@ namespace Flash_Cards
     {
         private readonly MainPageViewModel vm;
 
+        
+
         public MainPage()
         {
             InitializeComponent();

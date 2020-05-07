@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Windows.Input;
 using MVVMBase;
+using MyAzureLib;
+using System.Collections.Generic;
 
 namespace Flash_Cards
 {
@@ -13,7 +15,9 @@ namespace Flash_Cards
         private string _titleString = "Nothing Selected";
         private CatagoryCell _selectedString;
         private int _selectedRow = 0;
-     
+
+        public AzureLibrary AzureLibrary { get; }
+
         public ObservableCollection<CatagoryCell> CatagoryCards
         {
             get => _catagory;
@@ -87,6 +91,10 @@ namespace Flash_Cards
         {
             _viewHelper = viewHelper;
 
+            AzureLibrary = new AzureLibrary();
+
+
+
             /*
             CatagoryCell catagoryCell = new CatagoryCell()
             {
@@ -105,25 +113,32 @@ namespace Flash_Cards
             };
             */
 
-            CatagoryCards = new ObservableCollection<CatagoryCell>()
-            { 
-                /*new CatagoryCell("SOFT262", 4),
-                new CatagoryCell("AINT255", 4),
-                new CatagoryCell("Dinosaurs", 4),
-                new CatagoryCell("Food ", 4),
-                new CatagoryCell("Netflix", 4),
-                new CatagoryCell("Sport", 4),
-                new CatagoryCell("Oop", 4)
-                */
-                //new CatagoryCell("SOFT262", "question 1","answer 1"),
-                //new CatagoryCell("AINT255", "question 2", "answer 2"),
-                //new CatagoryCell("Dinosaurs", "question 3", "answer 3"),
-                //new CatagoryCell("Food", "question 4", "answer 4"),
-                new CatagoryCell("Netflix", "question 5", "answer 5"),
-                new CatagoryCell("",0)
-            };
+            //CatagoryCards = new ObservableCollection<CatagoryCell>()
+            //{ 
+            //    /*new CatagoryCell("SOFT262", 4),
+            //    new CatagoryCell("AINT255", 4),
+            //    new CatagoryCell("Dinosaurs", 4),
+            //    new CatagoryCell("Food ", 4),
+            //    new CatagoryCell("Netflix", 4),
+            //    new CatagoryCell("Sport", 4),
+            //    new CatagoryCell("Oop", 4)
+            //    */
+            //    //new CatagoryCell("SOFT262", "question 1","answer 1"),
+            //    //new CatagoryCell("AINT255", "question 2", "answer 2"),
+            //    //new CatagoryCell("Dinosaurs", "question 3", "answer 3"),
+            //    //new CatagoryCell("Food", "question 4", "answer 4"),
+            //    new CatagoryCell("Netflix", "question 5", "answer 5"),
+            //    new CatagoryCell("",0)
+            //};
 
             DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));
+        }
+
+        public async Task GetCatagories()
+        {
+            CatagoryCards = CardCatagories();
+
+            await AzureLibrary.QueryItemsAsync(CardCatagories card);
         }
     }
 }

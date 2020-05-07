@@ -11,6 +11,7 @@
           "Microsoft.Azure.Cosmos": "3.8.0",
           "Microsoft.Azure.DocumentDB.Core": "2.10.3",
           "Microsoft.Extensions.Configuration.UserSecrets": "3.1.3",
+          "MyAzureLib": "1.0.0",
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
@@ -1191,6 +1192,15 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "MyAzureLib/1.0.0": {
+        "dependencies": {
+          "Microsoft.Azure.Cosmos": "3.8.0",
+          "Microsoft.Azure.DocumentDB.Core": "2.10.3"
+        },
+        "runtime": {
+          "MyAzureLib.dll": {}
+        }
       }
     }
   },
@@ -2004,6 +2014,11 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "MyAzureLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

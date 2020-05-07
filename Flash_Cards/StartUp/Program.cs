@@ -1,29 +1,34 @@
 ﻿using Microsoft.Azure.Cosmos;
-using Microsoft.Azure.Cosmos.Linq;
 using System;
 using System.Threading.Tasks;
 using System.Net;
 using System.Collections.Generic;
+using MyAzureLib;
+
 
 namespace StartUp
 {
-    class Program
+    public class Program
     {
         private static readonly string EndPointURL = "https://flashcards.documents.azure.com:443/";
 
         private static readonly string PrimaryKey = "GKzcAXRvFZ2T60l5n8zmX74l1gJTuvE0KxFGVp5yrYyQXGbp7dByuLwiWYXUyuyxkuTg0hjWQduOF5urkwtaYg==";
 
-        private CosmosClient cosmosClient;
+        //private CosmosClient cosmosClient;
 
-        private Database database;
+        //private Database database;
 
-        private Container container;
+        //private Container container;
 
-        private readonly string databaseID = "ListOfCardsDB";
-        private readonly string containerID = "Items";
+        //private readonly string databaseID = "ListOfCardsDB";
+        //private readonly string containerID = "Items";
+
+        public AzureLibrary obj = new AzureLibrary();
 
         public static async Task Main(string[] args)
         {
+            //obj.container;
+
             try
             {
                 Console.WriteLine("Beginning operations...\n");
@@ -47,46 +52,49 @@ namespace StartUp
             }
         }
 
+
         public async Task Go()
         {
-            this.cosmosClient = new CosmosClient(EndPointURL, PrimaryKey, new CosmosClientOptions()
+            obj.cosmosClient = new CosmosClient(EndPointURL, PrimaryKey, new CosmosClientOptions()
             {
                 ApplicationName = "ListOfCards"
             });
 
+
             await this.CreateDatabaseAsync();
             await this.CreateContainerAsync();
-            await this.ScaleContainerAsync();
-            await this.AddCardToContainerAsync();
-            await this.QueryItemsAsync();
+            await obj.QueryItemsAsync();
+            // await this.ScaleContainerAsync();
+            /// await this.AddCardToContainerAsync();
+            // await this.QueryItemsAsync();
 
             //await this.DeleteCatagoryItemAsync();
 
             //await this.DeleteDatabaseAndCleanUpAsync();
         }
 
-        private async Task CreateDatabaseAsync()
-        {
-            this.database = await this.cosmosClient.CreateDatabaseIfNotExistsAsync(databaseID);
-            Console.WriteLine("Created Database: {0}\n", this.database.Id);
+        public async Task CreateDatabaseAsync()
+        { 
+            obj.database = await obj.cosmosClient.CreateDatabaseIfNotExistsAsync(obj.databaseID);
+            Console.WriteLine("Created Database: {0}\n", obj.database.Id);
         }
 
         private async Task CreateContainerAsync()
         {
-            this.container = await this.database.CreateContainerIfNotExistsAsync(containerID, "/Catagory", 400);
-            Console.WriteLine("Created Container: {0}\n", this.container.Id);
+            obj.container = await obj.database.CreateContainerIfNotExistsAsync(obj.containerID, "/Catagory", 400);
+            //Console.WriteLine("Created Container: {0}\n", this.container.Id);
         }
 
         private async Task ScaleContainerAsync()
         {
             // Read the current throughput
-            int? throughput = await this.container.ReadThroughputAsync();
+            int? throughput = await obj.container.ReadThroughputAsync();
             if (throughput.HasValue)
             {
                 Console.WriteLine("Current provisioned throughput : {0}\n", throughput.Value);
                 int newThroughput = throughput.Value + 100;
                 // Update throughput
-                await this.container.ReplaceThroughputAsync(newThroughput);
+                await obj.container.ReplaceThroughputAsync(newThroughput);
                 Console.WriteLine("New provisioned throughput : {0}\n", newThroughput);
             }
 
@@ -128,12 +136,12 @@ namespace StartUp
 
             try
             {
-                ItemResponse<CardCatagories> cardCatagory1Response = await this.container.ReadItemAsync<CardCatagories>(cardCatagory1.Id, new PartitionKey(cardCatagory1.Catagory));
+                ItemResponse<CardCatagories> cardCatagory1Response = await obj.container.ReadItemAsync<CardCatagories>(cardCatagory1.Id, new PartitionKey(cardCatagory1.Catagory));
                 Console.WriteLine("Item in database with id: {0} already exists\n", cardCatagory1Response.Resource.Id);
             }
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory1, new PartitionKey(cardCatagory1.Catagory));
+                ItemResponse<CardCatagories> cardCatagoryResponse = await obj.container.CreateItemAsync<CardCatagories>(cardCatagory1, new PartitionKey(cardCatagory1.Catagory));
                 Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
             }
 
@@ -162,12 +170,12 @@ namespace StartUp
 
             try
             {
-                ItemResponse<CardCatagories> cardCatagory2Response = await this.container.ReadItemAsync<CardCatagories>(cardCatagory2.Id, new PartitionKey(cardCatagory2.Catagory));
+                ItemResponse<CardCatagories> cardCatagory2Response = await obj.container.ReadItemAsync<CardCatagories>(cardCatagory2.Id, new PartitionKey(cardCatagory2.Catagory));
                 Console.WriteLine("Item in database with id: {0} already exists\n", cardCatagory2Response.Resource.Id);
             }
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory2, new PartitionKey(cardCatagory2.Catagory));
+                ItemResponse<CardCatagories> cardCatagoryResponse = await obj.container.CreateItemAsync<CardCatagories>(cardCatagory2, new PartitionKey(cardCatagory2.Catagory));
                 Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
             }
 
@@ -192,24 +200,24 @@ namespace StartUp
 
             try
             {
-                ItemResponse<CardCatagories> cardCatagory3Response = await this.container.ReadItemAsync<CardCatagories>(cardCatagory3.Id, new PartitionKey(cardCatagory3.Catagory));
+                ItemResponse<CardCatagories> cardCatagory3Response = await obj.container.ReadItemAsync<CardCatagories>(cardCatagory3.Id, new PartitionKey(cardCatagory3.Catagory));
                 Console.WriteLine("Item in database with id: {0} already exists\n", cardCatagory3Response.Resource.Id);
             }
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory3, new PartitionKey(cardCatagory3.Catagory));
+                ItemResponse<CardCatagories> cardCatagoryResponse = await obj.container.CreateItemAsync<CardCatagories>(cardCatagory3, new PartitionKey(cardCatagory3.Catagory));
                 Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
             }
         }
 
         private async Task QueryItemsAsync()
         {
-            var sqlQueryText = "SELECT * FROM c WHERE c.Catagory = 'SOFT262'";
+            var sqlQueryText = "SELECT * FROM c ORDER BY c.Catagory";
 
             Console.WriteLine("Running query: {0}\n", sqlQueryText);
 
             QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
-            FeedIterator<CardCatagories> queryResultSetIterator = this.container.GetItemQueryIterator<CardCatagories>(queryDefinition);
+            FeedIterator<CardCatagories> queryResultSetIterator = obj.container.GetItemQueryIterator<CardCatagories>(queryDefinition);
 
             List<CardCatagories> cardCatagories = new List<CardCatagories>();
 
@@ -226,11 +234,11 @@ namespace StartUp
 
         private async Task DeleteDatabaseAndCleanUpAsync()
         {
-            DatabaseResponse databaseResourse = await this.database.DeleteAsync();
+            DatabaseResponse databaseResourse = await obj.database.DeleteAsync();
 
-            Console.WriteLine("Deleted Database: {0}\n", this.databaseID);
+            Console.WriteLine("Deleted Database: {0}\n", obj.databaseID);
 
-            this.cosmosClient.Dispose();
+            obj.cosmosClient.Dispose();
         }
 
         private async Task DeleteCatagoryItemAsync()
@@ -239,7 +247,7 @@ namespace StartUp
             var catagoryId = "catagory.1";
 
             // Delete an item. Note we must provide the partition key value and id of the item to delete
-            ItemResponse<CardCatagories> itemResponse = await this.container.DeleteItemAsync<CardCatagories>(catagoryId, new PartitionKey(partitionKeyValue));
+            ItemResponse<CardCatagories> itemResponse = await obj.container.DeleteItemAsync<CardCatagories>(catagoryId, new PartitionKey(partitionKeyValue));
             Console.WriteLine("Deleted Catagory [{0}, {1}\n", partitionKeyValue, catagoryId);
         }
     }
