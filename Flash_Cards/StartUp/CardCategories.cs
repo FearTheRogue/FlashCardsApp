@@ -1,12 +1,10 @@
 ﻿using Newtonsoft.Json;
-using MyAzureLib;
 
 namespace StartUp
 {
     public class CardCatagories
     {
         [JsonProperty(PropertyName = "id")]
-
         public string Id { get; set; }
         public string Catagory { get; set; }
         public int CardCount { get; set; }

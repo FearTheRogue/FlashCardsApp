@@ -90,7 +90,7 @@ namespace Flash_Cards
         {
             List<MyAzureLib.CardCatagories> list = new List<MyAzureLib.CardCatagories>();
 
-            await AzureLibrary.QueryItemsAsync();
+            await AzureLibrary.QueryItemsAsync(list);
 
         }
 
@@ -100,8 +100,11 @@ namespace Flash_Cards
 
             AzureLibrary = new AzureLibrary();
 
-
             Temp();
+
+
+
+            //Temp();
             /*
             CatagoryCell catagoryCell = new CatagoryCell()
             {

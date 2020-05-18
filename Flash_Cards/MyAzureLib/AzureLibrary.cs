@@ -7,9 +7,9 @@ namespace MyAzureLib
 {
     public class AzureLibrary
     {
-        private static readonly string EndPointURL = "https://flashcards.documents.azure.com:443/";
+        public static readonly string EndPointURL = "https://flashcards.documents.azure.com:443/";
 
-        private static readonly string PrimaryKey = "GKzcAXRvFZ2T60l5n8zmX74l1gJTuvE0KxFGVp5yrYyQXGbp7dByuLwiWYXUyuyxkuTg0hjWQduOF5urkwtaYg==";
+        public static readonly string PrimaryKey = "GKzcAXRvFZ2T60l5n8zmX74l1gJTuvE0KxFGVp5yrYyQXGbp7dByuLwiWYXUyuyxkuTg0hjWQduOF5urkwtaYg==";
 
         public CosmosClient cosmosClient;
 
@@ -22,20 +22,14 @@ namespace MyAzureLib
 
         public AzureLibrary()
         {
-            Console.WriteLine("greetings from the library");
-            this.cosmosClient = new CosmosClient(EndPointURL, PrimaryKey, new CosmosClientOptions()
-            {
-                ApplicationName = "ListOfCards"
-            });
-
-            ReadDataIn();
+            //ReadDataIn();
         }
 
         public async Task ReadDataIn()
         {
             await this.CheckDatabaseAsync();
             await this.CheckContainerAsync();
-            await this.QueryItemsAsync();
+            //await this.QueryItemsAsync();
         }
 
         private async Task CheckDatabaseAsync()
@@ -46,11 +40,11 @@ namespace MyAzureLib
         public async Task CheckContainerAsync()
         {
             this.container = await this.database.CreateContainerIfNotExistsAsync(this.containerID, "/Catagory", 400);
+           
         }
 
-        public async Task QueryItemsAsync()
+        public async Task QueryItemsAsync(List<CardCatagories> temp)
         {
-
             var sqlQueryText = "SELECT * FROM c ORDER BY c.Catagory";
 
             QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
@@ -64,8 +58,9 @@ namespace MyAzureLib
                 FeedResponse<CardCatagories> currentResultSet = await queryResultSetIterator.ReadNextAsync();
                 foreach (CardCatagories catagories in currentResultSet)
                 {
-                    cardCatagories.Add(catagories);
-                    Console.WriteLine("\tRead {0}\n", catagories);
+                    //cardCatagories.Add(catagories);
+                    temp.Add(catagories);
+                    //Console.WriteLine("\tRead {0}\n", catagories);
                 }
             }
             //return cards;
