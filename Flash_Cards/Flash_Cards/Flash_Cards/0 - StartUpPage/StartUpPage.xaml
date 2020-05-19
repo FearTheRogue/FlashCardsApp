@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="First Page"
-             x:Class="Flash_Cards.FirstPage"
+             x:Class="Flash_Cards.StartUp"
              BackgroundImageSource="bg_01.png">
 
     <StackLayout Orientation="Vertical" Padding="0,0,0,0">

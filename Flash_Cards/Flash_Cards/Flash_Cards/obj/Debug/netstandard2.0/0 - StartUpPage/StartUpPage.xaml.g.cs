@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Flash_Cards._0___StartUpPage.StartUpPage.xaml", "0 - StartUpPage/StartUpPage.xaml", typeof(global::Flash_Cards.FirstPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Flash_Cards._0___StartUpPage.StartUpPage.xaml", "0 - StartUpPage/StartUpPage.xaml", typeof(global::Flash_Cards.StartUp))]
 
 namespace Flash_Cards {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("0 - StartUpPage\\StartUpPage.xaml")]
-    public partial class FirstPage : global::Xamarin.Forms.ContentPage {
+    public partial class StartUp : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Label HeaderText;
@@ -24,7 +24,7 @@ namespace Flash_Cards {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FirstPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(StartUp));
             HeaderText = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "HeaderText");
             ContButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "ContButton");
         }

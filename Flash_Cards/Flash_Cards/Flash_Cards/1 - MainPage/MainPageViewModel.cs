@@ -86,25 +86,21 @@ namespace Flash_Cards
 
         public void DeleteItem(CatagoryCell c)  { CatagoryCards.Remove(c); }
 
-        public async Task Temp()
+
+        public async void Temp()
         {
-            List<MyAzureLib.CardCatagories> list = new List<MyAzureLib.CardCatagories>();
+            List<CardCatagories> list = new List<CardCatagories>();
 
             await AzureLibrary.QueryItemsAsync(list);
-
         }
+
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
             _viewHelper = viewHelper;
 
-            AzureLibrary = new AzureLibrary();
-
             Temp();
 
-
-
-            //Temp();
             /*
             CatagoryCell catagoryCell = new CatagoryCell()
             {
@@ -125,20 +121,19 @@ namespace Flash_Cards
 
             //CatagoryCards = new ObservableCollection<CatagoryCell>()
             //{ 
-            //    /*new CatagoryCell("SOFT262", 4),
+            //    new CatagoryCell("SOFT262", 4),
             //    new CatagoryCell("AINT255", 4),
             //    new CatagoryCell("Dinosaurs", 4),
             //    new CatagoryCell("Food ", 4),
             //    new CatagoryCell("Netflix", 4),
             //    new CatagoryCell("Sport", 4),
             //    new CatagoryCell("Oop", 4)
-            //    */
+               
             //    //new CatagoryCell("SOFT262", "question 1","answer 1"),
             //    //new CatagoryCell("AINT255", "question 2", "answer 2"),
             //    //new CatagoryCell("Dinosaurs", "question 3", "answer 3"),
             //    //new CatagoryCell("Food", "question 4", "answer 4"),
-            //    new CatagoryCell("Netflix", "question 5", "answer 5"),
-            //    new CatagoryCell("",0)
+      
             //};
 
             DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));

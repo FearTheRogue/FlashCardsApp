@@ -18,31 +18,31 @@ namespace MyAzureLib
         public Container container;
 
         public readonly string databaseID = "ListOfCardsDB";
+
         public readonly string containerID = "Items";
 
-        public AzureLibrary()
+        public async Task Go()
         {
-            //ReadDataIn();
+            this.cosmosClient = new CosmosClient(EndPointURL, PrimaryKey, new CosmosClientOptions()
+            {
+                ApplicationName = "ListOfCards"
+            });
+
+            await CheckDatabaseAsync();
+            await CheckContainerAsync();
         }
 
-        public async Task ReadDataIn()
-        {
-            await this.CheckDatabaseAsync();
-            await this.CheckContainerAsync();
-            //await this.QueryItemsAsync();
-        }
-
-        private async Task CheckDatabaseAsync()
+        // Creating db and container
+        public async Task CheckDatabaseAsync()
         {
             this.database = await this.cosmosClient.CreateDatabaseIfNotExistsAsync(this.databaseID);
         }
-
         public async Task CheckContainerAsync()
         {
             this.container = await this.database.CreateContainerIfNotExistsAsync(this.containerID, "/Catagory", 400);
-           
         }
 
+        // Read Data
         public async Task QueryItemsAsync(List<CardCatagories> temp)
         {
             var sqlQueryText = "SELECT * FROM c ORDER BY c.Catagory";
@@ -51,7 +51,7 @@ namespace MyAzureLib
 
             FeedIterator<CardCatagories> queryResultSetIterator = this.container.GetItemQueryIterator<CardCatagories>(queryDefinition);
 
-            List<CardCatagories> cardCatagories = new List<CardCatagories>();
+            //List<CardCatagories> cardCatagories = new List<CardCatagories>();
 
             while (queryResultSetIterator.HasMoreResults)
             {

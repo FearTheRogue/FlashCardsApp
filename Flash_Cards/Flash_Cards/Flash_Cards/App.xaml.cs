@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MyAzureLib;
 
 namespace Flash_Cards
 {
@@ -10,9 +11,13 @@ namespace Flash_Cards
         {
             InitializeComponent();
 
-            FirstPage firstPage = new FirstPage();
+            StartUp firstPage = new StartUp();
 
             MainPage = new NavigationPage(firstPage);
+
+            //AzureLibrary myLib = new AzureLibrary();
+            //myLib.CheckDatabaseAsync();
+            //myLib.CheckContainerAsync();
         }
 
         protected override void OnStart()

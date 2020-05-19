@@ -67,7 +67,7 @@ namespace StartUp
             //Console.Write("Enter a card catagory title: ");
 
             //string temp = Console.ReadLine();
-            await this.QueryItemsAsync();
+            //await this.QueryItemsAsync();
 
             //await this.DeleteCatagoryItemAsync();
 
@@ -197,7 +197,7 @@ namespace StartUp
             }
         }
 
-        private async Task QueryItemsAsync()
+        private async Task QueryItemsAsync(List<CardCatagories> cardCatagories)
         {
             //var sqlQueryText = $"SELECT * FROM c WHERE c.Catagory = {"'" + cardname + "'"}";
             var sqlQueryText = $"SELECT * FROM c ORDER BY c.id";
@@ -207,7 +207,7 @@ namespace StartUp
             QueryDefinition queryDefinition = new QueryDefinition(sqlQueryText);
             FeedIterator<CardCatagories> queryResultSetIterator = this.container.GetItemQueryIterator<CardCatagories>(queryDefinition);
 
-            List<CardCatagories> cardCatagories = new List<CardCatagories>();
+            //List<CardCatagories> cardCatagories = new List<CardCatagories>();
                 
             while (queryResultSetIterator.HasMoreResults)
             {
