@@ -32,9 +32,9 @@ namespace Flash_Cards
             MessagingCenter.Subscribe<AddCardPage, string>(this, "new", (sender, e) =>
             {
                 DisplayAlert("Yay! New Catagory", e + " has been Added", "Ok");
-                CatagoryCell newCard = new CatagoryCell(e, 0);
+                //CatagoryCell newCard = new CatagoryCell(e, 0);
 
-                vm.AddNewCard(newCard);
+                //vm.AddNewCard(newCard);
             });
 
             

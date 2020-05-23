@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MVVMBase;
 using MyAzureLib;
+using System.Collections.Generic;
 
 namespace Flash_Cards
 {
@@ -11,14 +12,16 @@ namespace Flash_Cards
     public partial class AddCardPage : ContentPage
     {
         public AzureLibrary azure;
+        public List<CatagoryCell> cell = new List<CatagoryCell>();
 
         public AddCardPage()
         {
             InitializeComponent();
 
             azure = SingletonModel.SingletonInstance.Library;
+            cell = SingletonModel.SingletonInstance.Categories;
 
-            
+            CategoryID.Text = "ID: catagory." + (cell.Count + 1);
 
             SaveCardButton.Clicked += SaveCardButton_Clicked;
         }
@@ -30,12 +33,22 @@ namespace Flash_Cards
             await DisplayAlert(title, message, "Dismiss");
         }
 
-        private void SaveCardButton_Clicked(object sender, EventArgs e)
+        public async Task AddNewCard()
         {
             string text = CatagoryTitle.Text;
 
-            MessagingCenter.Send(this,"new", text);
-         
+            await azure.AddCardToCategory("category." + (cell.Count + 1), text);
+        }
+
+        private void SaveCardButton_Clicked(object sender, EventArgs e)
+        {
+            //  MessagingCenter.Send(this,"new", text);
+
+            Task.Run(async () =>
+            {
+                await AddNewCard();
+            }).Wait();
+
             Navigation.PopAsync();
         } 
     }

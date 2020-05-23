@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos;
 using System.Collections.Generic;
+using System.Threading;
+using System.Net;
 
 namespace MyAzureLib
 {
@@ -15,6 +17,7 @@ namespace MyAzureLib
         private Database _database;
         private Container _container;
 
+        // Creating Data
         public CosmosClient CosmosClientRef
         {
             get
@@ -48,20 +51,40 @@ namespace MyAzureLib
             }
             return _container;
         }
-            
-
-        //public Database database;
-
-        //public Container container;
 
         public readonly string databaseID = "ListOfCardsDB";
 
         public readonly string containerID = "Items";
-
-
         public AzureLibrary()
         {
             
+        }
+
+        public async Task AddCardToCategory(string id, string newTitle)
+        {
+            CardCatagories newCardCategory = new CardCatagories
+            {
+                Id = id,
+                Catagory = newTitle,
+                CardCount = 0,
+                Questions = new Question[]
+                {
+                    new Question{CardQuestion = "new question"}
+                },
+                Answers = new Answer[]
+                {
+                    new Answer{CardAnwser = "new answer"}
+                },
+            };
+
+            try
+            {
+                ItemResponse<CardCatagories> newCardResponse1 = await this._container.ReadItemAsync<CardCatagories>(newCardCategory.Id, new PartitionKey(newCardCategory.Catagory));
+            } 
+            catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                ItemResponse<CardCatagories> cardCategoryResponse = await this._container.CreateItemAsync<CardCatagories>(newCardCategory, new PartitionKey(newCardCategory.Catagory));
+            }
         }
 
         /*
@@ -95,19 +118,14 @@ namespace MyAzureLib
 
             FeedIterator<CardCatagories> queryResultSetIterator = this._container.GetItemQueryIterator<CardCatagories>(queryDefinition);
 
-            //List<CardCatagories> cardCatagories = new List<CardCatagories>();
-
             while (queryResultSetIterator.HasMoreResults)
             {
                 FeedResponse<CardCatagories> currentResultSet = await queryResultSetIterator.ReadNextAsync();
                 foreach (CardCatagories catagories in currentResultSet)
                 {
-                    //cardCatagories.Add(catagories);
                     temp.Add(catagories);
-                    //Console.WriteLine("\tRead {0}\n", catagories);
                 }
             }
-            //return cards;
         }
     }
 }

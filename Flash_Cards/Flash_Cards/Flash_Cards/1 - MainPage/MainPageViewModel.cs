@@ -1,7 +1,9 @@
 ﻿using MVVMBase;
 using MyAzureLib;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -129,7 +131,9 @@ namespace Flash_Cards
 
             foreach (CardCatagories catagories in Categories)
             {
-                AppCategories.Add(new CatagoryCell(catagories.Catagory, catagories.CardCount));
+                AppCategories.Add(new CatagoryCell(catagories.Id, catagories.Catagory, catagories.CardCount, catagories.Questions, catagories.Answers));
+
+                SingletonModel.SingletonInstance.Categories = AppCategories;
             }
 
             /*

@@ -11,6 +11,7 @@ namespace Flash_Cards
     {
         private static SingletonModel model;
         private AzureLibrary _library;
+        private List<CatagoryCell> _categories;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -21,6 +22,17 @@ namespace Flash_Cards
             {
                 if (_library == value) return;
                     _library = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<CatagoryCell> Categories 
+        {
+            get => _categories;
+            set
+            {
+                if (_categories == value) return;
+                _categories = value;
                 OnPropertyChanged();
             }
         }

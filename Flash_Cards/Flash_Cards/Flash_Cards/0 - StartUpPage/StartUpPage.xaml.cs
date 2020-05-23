@@ -64,9 +64,6 @@ namespace Flash_Cards
 
             var nextPage = new MainPage();
             await Navigation.PushAsync(nextPage, true);
-            
-            containerid.Text = "Container ID: " + _library.containerID + "Database ID: " + _library.databaseID + "Cosmos ID: " + _library.CosmosClientRef.ToString();
-           // categories.Text = cat.ToString();
         }
     }
 }

@@ -34,7 +34,8 @@
         <ActivityIndicator x:Name="Spinner"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
-                           IsRunning="false"/>
+                           IsRunning="false"
+                           Color="Gray"/>
 
         <StackLayout Orientation="Vertical" Padding="40,0,40,20">
 
@@ -53,14 +54,6 @@
                     VerticalOptions="Center"
                     BackgroundColor="Gray"
                     Clicked="ContButton_Clicked"/>
-        </StackLayout>
-
-        <StackLayout Orientation="Horizontal">
-        <Label Text="Container ID"
-               x:Name="containerid"/>
-
-        <Label Text="categories"
-               x:Name="categories"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

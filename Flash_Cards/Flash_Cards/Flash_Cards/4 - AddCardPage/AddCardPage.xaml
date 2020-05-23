@@ -21,14 +21,14 @@
                    HorizontalOptions="CenterAndExpand" 
                    Padding="0,20,0,20"/>
             
-            <Label
-                Text="{Binding CategoryID}"
+            <Label x:Name="CategoryID"
+                   Text="ID: "
                    VerticalOptions="Center"
-                   HorizontalOptions="Start"
-                   FontSize="25"
+                   HorizontalOptions="StartAndExpand"
+                   FontSize="15"
                    Padding="20,0,10,0"/>
             
-            <StackLayout Orientation="Horizontal" Padding="0,0,0,20" BackgroundColor="Red">
+            <StackLayout Orientation="Horizontal" Padding="0,10,0,20" BackgroundColor="Red">
 
                 <Label Text="Title: "
                        VerticalOptions="Center"
