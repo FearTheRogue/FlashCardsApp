@@ -20,4 +20,3 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\ne
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.AssemblyInfo.cs
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.pdb
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.csprojAssemblyReference.cache

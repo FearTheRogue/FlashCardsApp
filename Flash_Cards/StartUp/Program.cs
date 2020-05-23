@@ -226,7 +226,7 @@ namespace StartUp
 
             Console.WriteLine("Deleted Database: {0}\n", obj.databaseID);
 
-            obj.cosmosClient.Dispose();
+            //obj.cosmosClient.Dispose();
         }
 
         private async Task DeleteCatagoryItemAsync()

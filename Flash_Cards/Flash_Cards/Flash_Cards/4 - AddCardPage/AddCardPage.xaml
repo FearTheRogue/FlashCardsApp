@@ -20,7 +20,14 @@
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand" 
                    Padding="0,20,0,20"/>
-
+            
+            <Label
+                Text="{Binding CategoryID}"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   FontSize="25"
+                   Padding="20,0,10,0"/>
+            
             <StackLayout Orientation="Horizontal" Padding="0,0,0,20" BackgroundColor="Red">
 
                 <Label Text="Title: "
@@ -39,6 +46,9 @@
                 </Entry>
 
             </StackLayout>
+
+            
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

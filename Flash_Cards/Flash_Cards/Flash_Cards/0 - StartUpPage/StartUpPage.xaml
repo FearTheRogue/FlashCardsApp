@@ -31,6 +31,11 @@
                HorizontalOptions="Center"
                VerticalOptions="FillAndExpand"/>
 
+        <ActivityIndicator x:Name="Spinner"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           IsRunning="false"/>
+
         <StackLayout Orientation="Vertical" Padding="40,0,40,20">
 
             <Label Text="In this App, you will be able to test your knowledge in different catagories. Click on the button below to start."
@@ -48,7 +53,14 @@
                     VerticalOptions="Center"
                     BackgroundColor="Gray"
                     Clicked="ContButton_Clicked"/>
+        </StackLayout>
 
+        <StackLayout Orientation="Horizontal">
+        <Label Text="Container ID"
+               x:Name="containerid"/>
+
+        <Label Text="categories"
+               x:Name="categories"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

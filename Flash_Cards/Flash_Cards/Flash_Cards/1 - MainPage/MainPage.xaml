@@ -22,13 +22,14 @@
                    VerticalOptions="StartAndExpand"
                    Padding="0,20,0,20"/>
 
-        <ListView ItemsSource="{Binding CatagoryCards}"
+        <ListView ItemsSource="{Binding AppCategories}"
                   x:Name="CatagoryListView"
                   SelectedItem="{Binding SelectedString}"
                   HorizontalOptions="Center"
                   HasUnevenRows="False"
                   RowHeight="80"
                   VerticalOptions="CenterAndExpand">
+           
 
             <ListView.ItemTemplate>
                 <DataTemplate>

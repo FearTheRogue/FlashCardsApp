@@ -2,6 +2,7 @@
 using MyAzureLib;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -16,7 +17,9 @@ namespace Flash_Cards
         private CatagoryCell _selectedString;
         private int _selectedRow = 0;
 
-        public AzureLibrary AzureLibrary { get; }
+        public AzureLibrary azure;
+        List<CardCatagories> _list = new List<CardCatagories>();
+        List<CatagoryCell> _appCategories = new List<CatagoryCell>();
 
         public ObservableCollection<CatagoryCell> CatagoryCards
         {
@@ -25,6 +28,28 @@ namespace Flash_Cards
             {
                 if (_catagory == value)  { return;  }
                 _catagory = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<CardCatagories> Categories
+        {
+            get => _list;
+            set
+            {
+                if(_list == value) { return; }
+                _list = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public List<CatagoryCell> AppCategories
+        {
+            get => _appCategories;
+            set
+            {
+                if(_appCategories == value) { return; }
+                _appCategories = value;
                 OnPropertyChanged();
             }
         }
@@ -86,20 +111,26 @@ namespace Flash_Cards
 
         public void DeleteItem(CatagoryCell c)  { CatagoryCards.Remove(c); }
 
-
-        public async void Temp()
+        public async Task Temp()
         {
-            List<CardCatagories> list = new List<CardCatagories>();
-
-            await AzureLibrary.QueryItemsAsync(list);
+            await azure.QueryItemsAsync(Categories);
         }
-
 
         public MainPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
         {
             _viewHelper = viewHelper;
 
-            Temp();
+            azure = SingletonModel.SingletonInstance.Library;
+
+            Task.Run(async () =>
+            {
+                await Temp();
+            }).Wait();
+
+            foreach (CardCatagories catagories in Categories)
+            {
+                AppCategories.Add(new CatagoryCell(catagories.Catagory, catagories.CardCount));
+            }
 
             /*
             CatagoryCell catagoryCell = new CatagoryCell()
@@ -128,12 +159,12 @@ namespace Flash_Cards
             //    new CatagoryCell("Netflix", 4),
             //    new CatagoryCell("Sport", 4),
             //    new CatagoryCell("Oop", 4)
-               
+
             //    //new CatagoryCell("SOFT262", "question 1","answer 1"),
             //    //new CatagoryCell("AINT255", "question 2", "answer 2"),
             //    //new CatagoryCell("Dinosaurs", "question 3", "answer 3"),
             //    //new CatagoryCell("Food", "question 4", "answer 4"),
-      
+
             //};
 
             DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));

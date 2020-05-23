@@ -2,6 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MVVMBase;
+using System;
+using System.Xml.Serialization;
+using MyAzureLib;
 
 namespace Flash_Cards
 {
@@ -16,9 +19,13 @@ namespace Flash_Cards
 
             vm = new MainPageViewModel(this);
             BindingContext = vm;
-
+            
+            //GetCategory();
             CatagoryListView.SelectionMode = ListViewSelectionMode.Single;
             CatagoryListView.ItemSelected += Catagory_ItemSelectedAsync;
+
+            //CatagoryListViewTemp.SelectionMode = ListViewSelectionMode.Single;
+            //CatagoryListViewTemp.ItemSelected += Catagory_ItemSelectedAsync;
 
             AddButton.Clicked += AddButton_ClickedAsync;
 
@@ -29,6 +36,8 @@ namespace Flash_Cards
 
                 vm.AddNewCard(newCard);
             });
+
+            
         }
 
         private async void Catagory_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
@@ -37,6 +46,11 @@ namespace Flash_Cards
 
             CatagoryCell itemString = (CatagoryCell)e.SelectedItem;
             await vm.ItemSelectionChangedAsync(card: itemString);
+        }
+
+        private async void GetCategory()
+        {
+            await vm.Temp();
         }
 
         INavigation IPage.NavigationProxy => Navigation;

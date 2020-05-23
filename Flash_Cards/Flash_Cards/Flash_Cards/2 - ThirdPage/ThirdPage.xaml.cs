@@ -36,5 +36,17 @@ namespace Flash_Cards
         {
             throw new System.NotImplementedException();
         }
+
+        public async Task<bool> ShowQuestion(string title, string message)
+        {
+            bool answer = await DisplayAlert(title, message, "Show Answer", "Back to cards");
+            return answer;
+        }
+
+        public async Task<bool> ShowAnswer(string title, string message)
+        {
+            bool answer = await DisplayAlert(title, message, "Show Question", "Back to cards");
+            return answer;
+        }
     }
 }

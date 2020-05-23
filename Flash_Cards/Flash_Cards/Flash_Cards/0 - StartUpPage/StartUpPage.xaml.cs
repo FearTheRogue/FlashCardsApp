@@ -3,6 +3,9 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using MyAzureLib;
 using System.Threading.Tasks;
+using MVVMBase;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Flash_Cards
 {
@@ -11,27 +14,59 @@ namespace Flash_Cards
     [DesignTimeVisible(false)]
     public partial class StartUp : ContentPage
     {
-        public AzureLibrary AzureLibrary { get; }   
+        public AzureLibrary _library;
+        //List<MyAzureLib.CardCatagories> cat = new List<MyAzureLib.CardCatagories>();
+
+        //public AzureLibrary Library
+        //{
+        //    get => _library;
+        //    set
+        //    {
+        //        if (_library != value)
+        //        {
+        //            _library = value;
+        //            OnPropertyChanged();
+        //        }
+        //    }
+        //}
 
         public StartUp()
         {
             InitializeComponent();
 
-            AzureLibrary = new AzureLibrary();
+            //Check();
 
-            CreateData();   
+            _library = SingletonModel.SingletonInstance.Library;
+
+            _library = new AzureLibrary();
+
+            SingletonModel.SingletonInstance.Library = _library;
         }
 
-        private async void CreateData()
+        private async Task WaitCreate()
         {
-            await AzureLibrary.Go();
+            await _library.GetContainer();
+        }
+
+        private async Task GetCategories()
+        {
+           // await _library.QueryItemsAsync(cat);
         }
 
         private async void ContButton_Clicked(object sender, EventArgs e)
-        {
+        {  
+            Spinner.IsRunning = true;
+
+            await WaitCreate();
+            //await GetCategories();
+
+            Spinner.IsRunning = false;
+
             var nextPage = new MainPage();
             await Navigation.PushAsync(nextPage, true);
+            
+            containerid.Text = "Container ID: " + _library.containerID + "Database ID: " + _library.databaseID + "Cosmos ID: " + _library.CosmosClientRef.ToString();
+           // categories.Text = cat.ToString();
         }
-
     }
 }

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
-      "Microsoft.Azure.Cosmos/3.8.0": {
+      "Microsoft.Azure.Cosmos/3.9.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "10.0.2",
@@ -1697,7 +1697,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.726": {
+      "Xamarin.Forms/4.6.0.800": {
         "type": "package",
         "dependencies": {
           "Xamarin.Android.Support.CustomTabs": "28.0.0.3",
@@ -1729,11 +1729,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.Azure.Cosmos": "3.8.0",
+          "Microsoft.Azure.Cosmos": "3.9.1",
           "Microsoft.Azure.DocumentDB.Core": "2.10.3",
           "MyAzureLib": "1.0.0",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.6.0.726"
+          "Xamarin.Forms": "4.6.0.800"
         },
         "compile": {
           "bin/placeholder/Flash_Cards.dll": {}
@@ -1746,7 +1746,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.Azure.Cosmos": "3.8.0",
+          "Microsoft.Azure.Cosmos": "3.9.1",
           "Microsoft.Azure.DocumentDB.Core": "2.10.3"
         },
         "compile": {
@@ -1759,10 +1759,10 @@
     }
   },
   "libraries": {
-    "Microsoft.Azure.Cosmos/3.8.0": {
-      "sha512": "nmF9HTlRuLNDWaTyRR/GudqOUbrFQoMNuCxpdCxU7BCQJ3qzV5tHS9vKeX9Zg/SmFXKgjjO5NaE6AltvGuiaRQ==",
+    "Microsoft.Azure.Cosmos/3.9.1": {
+      "sha512": "Ng16jhZOz/zB6NA61otKL+xCDG1xvyWUjdF1/OvnstneyDG25dOmZmPW+szdDqd3uxnP8oVqS6rZiCTMB6qTtg==",
       "type": "package",
-      "path": "microsoft.azure.cosmos/3.8.0",
+      "path": "microsoft.azure.cosmos/3.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1772,7 +1772,7 @@
         "lib/netstandard2.0/Microsoft.Azure.Cosmos.Core.dll",
         "lib/netstandard2.0/Microsoft.Azure.Cosmos.Direct.dll",
         "lib/netstandard2.0/Microsoft.Azure.Cosmos.Serialization.HybridRow.dll",
-        "microsoft.azure.cosmos.3.8.0.nupkg.sha512",
+        "microsoft.azure.cosmos.3.9.1.nupkg.sha512",
         "microsoft.azure.cosmos.nuspec",
         "ref/netstandard2.0/Microsoft.Azure.Cosmos.Client.dll",
         "ref/netstandard2.0/Microsoft.Azure.Cosmos.Client.xml",
@@ -6431,10 +6431,10 @@
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.6.0.726": {
-      "sha512": "NI7iL5NnrQN/gCyoHLlexcDndNin67hFV7ObG8QQU2zbEi15B1SRaAsuiNeXVYAHfXg3/amqryqzGd+3R6lyZQ==",
+    "Xamarin.Forms/4.6.0.800": {
+      "sha512": "9BkqdiqdaigD+QlHqmHHMm32NNo7mnuIG+fOgIbSbzzqT1MKN+KPVgem8OUkKOnFP4u6piq9D99xrVafKSztIg==",
       "type": "package",
-      "path": "xamarin.forms/4.6.0.726",
+      "path": "xamarin.forms/4.6.0.800",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6740,7 +6740,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.6.0.726.nupkg.sha512",
+        "xamarin.forms.4.6.0.800.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -6758,31 +6758,31 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "Flash_Cards >= 1.0.0",
-      "Microsoft.Azure.Cosmos >= 3.8.0",
+      "Microsoft.Azure.Cosmos >= 3.9.1",
       "Microsoft.Azure.DocumentDB.Core >= 2.10.3",
       "Xamarin.Essentials >= 1.5.3.2",
-      "Xamarin.Forms >= 4.6.0.726"
+      "Xamarin.Forms >= 4.6.0.800"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ryan\\.nuget\\packages\\": {},
+    "C:\\Users\\coypu\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
+      "projectUniqueName": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
       "projectName": "Flash_Cards.Android",
-      "projectPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
-      "packagesPath": "C:\\Users\\Ryan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\obj\\",
+      "projectPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\Flash_Cards.Android.csproj",
+      "packagesPath": "C:\\Users\\coypu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ryan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\coypu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6796,8 +6796,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj": {
-              "projectPath": "C:\\Users\\Ryan\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj"
+            "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj": {
+              "projectPath": "C:\\Users\\coypu\\Documents\\GitHub\\FlashCardsApp\\Flash_Cards\\Flash_Cards\\Flash_Cards\\Flash_Cards.csproj"
             }
           }
         }
@@ -6808,7 +6808,7 @@
         "dependencies": {
           "Microsoft.Azure.Cosmos": {
             "target": "Package",
-            "version": "[3.8.0, )"
+            "version": "[3.9.1, )"
           },
           "Microsoft.Azure.DocumentDB.Core": {
             "target": "Package",
@@ -6820,7 +6820,7 @@
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.6.0.726, )"
+            "version": "[4.6.0.800, )"
           }
         }
       }

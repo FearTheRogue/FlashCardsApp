@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "MyAzureLib/1.0.0": {
         "dependencies": {
-          "Microsoft.Azure.Cosmos": "3.8.0",
+          "Microsoft.Azure.Cosmos": "3.9.1",
           "Microsoft.Azure.DocumentDB.Core": "2.10.3",
           "NETStandard.Library": "2.0.3"
         },
@@ -17,7 +17,7 @@
           "MyAzureLib.dll": {}
         }
       },
-      "Microsoft.Azure.Cosmos/3.8.0": {
+      "Microsoft.Azure.Cosmos/3.9.1": {
         "dependencies": {
           "Newtonsoft.Json": "10.0.2",
           "System.Configuration.ConfigurationManager": "4.5.0",
@@ -29,16 +29,16 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Azure.Cosmos.Client.dll": {
-            "assemblyVersion": "3.8.0.0",
-            "fileVersion": "3.8.0.0"
+            "assemblyVersion": "3.9.1.0",
+            "fileVersion": "3.9.1.0"
           },
           "lib/netstandard2.0/Microsoft.Azure.Cosmos.Core.dll": {
             "assemblyVersion": "2.4.0.0",
             "fileVersion": "2.4.0.0"
           },
           "lib/netstandard2.0/Microsoft.Azure.Cosmos.Direct.dll": {
-            "assemblyVersion": "3.7.1.0",
-            "fileVersion": "3.7.1.0"
+            "assemblyVersion": "3.9.0.0",
+            "fileVersion": "3.9.0.0"
           },
           "lib/netstandard2.0/Microsoft.Azure.Cosmos.Serialization.HybridRow.dll": {
             "assemblyVersion": "2.4.0.0",
@@ -1256,12 +1256,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.Azure.Cosmos/3.8.0": {
+    "Microsoft.Azure.Cosmos/3.9.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-nmF9HTlRuLNDWaTyRR/GudqOUbrFQoMNuCxpdCxU7BCQJ3qzV5tHS9vKeX9Zg/SmFXKgjjO5NaE6AltvGuiaRQ==",
-      "path": "microsoft.azure.cosmos/3.8.0",
-      "hashPath": "microsoft.azure.cosmos.3.8.0.nupkg.sha512"
+      "sha512": "sha512-Ng16jhZOz/zB6NA61otKL+xCDG1xvyWUjdF1/OvnstneyDG25dOmZmPW+szdDqd3uxnP8oVqS6rZiCTMB6qTtg==",
+      "path": "microsoft.azure.cosmos/3.9.1",
+      "hashPath": "microsoft.azure.cosmos.3.9.1.nupkg.sha512"
     },
     "Microsoft.Azure.DocumentDB.Core/2.10.3": {
       "type": "package",
