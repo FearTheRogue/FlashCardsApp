@@ -2,8 +2,6 @@
 {
     public class CatagoryCell
     {
-       
-
         public string Id { get; set; }
         public string Catagory { get; set; }
 
@@ -17,6 +15,12 @@
             Id = id;
             Catagory = catagory;
             CardCount = cardCount;
+            this.questions = questions;
+            this.answers = answers;
+        }
+
+        public CatagoryCell(MyAzureLib.Question[] questions,MyAzureLib.Answer[] answers)
+        {
             this.questions = questions;
             this.answers = answers;
         }
