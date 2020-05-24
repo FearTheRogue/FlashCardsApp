@@ -12,12 +12,23 @@ namespace Flash_Cards
         private readonly ThirdPageViewModel vm;
         private IMainPageHelper _viewHelper;
 
+        string passedId;
+
         public ThirdPage()
         {
             InitializeComponent();
 
             vm = new ThirdPageViewModel(this);
             BindingContext = vm;
+
+            MessagingCenter.Subscribe<MainPageViewModel, string>(this, "new", async (sender, e) =>
+            {
+                //CatagoryCell newCard = new CatagoryCell(e, 0);
+                //vm.AddNewCard(newCard);
+
+                await DisplayAlert("ID ", e, "Ok");
+                passedId = e;
+            });
         }
 
         INavigation IPage.NavigationProxy => Navigation;

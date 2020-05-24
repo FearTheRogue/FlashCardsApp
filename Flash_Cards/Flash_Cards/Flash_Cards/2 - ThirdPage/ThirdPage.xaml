@@ -17,7 +17,8 @@
                    HorizontalOptions="CenterAndExpand" 
                    Padding="0,20,0,20"/>
             
-            <Label Text="row"
+            <Label
+                   Text="{Binding CategoryId}"
                    FontSize="20"
                    VerticalOptions="Start"
                    HorizontalOptions="CenterAndExpand"/>

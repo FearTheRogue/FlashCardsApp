@@ -3,8 +3,6 @@ using MyAzureLib;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Security.Cryptography;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -95,6 +93,8 @@ namespace Flash_Cards
             var nextPage = new ThirdPage();
             await Navigation.PushAsync(nextPage);
             nextPage.Title = card.Catagory + " Catagory Page";
+            string temp = card.Id.ToString();
+            MessagingCenter.Send(this, "new", temp);
         }
 
         public void AddNewCard(CatagoryCell newCardString)
