@@ -60,6 +60,7 @@ namespace MyAzureLib
             
         }
 
+        // Create new Category
         public async Task AddCardToCategory(string id, string newTitle)
         {
             CardCatagories newCardCategory = new CardCatagories
@@ -79,11 +80,23 @@ namespace MyAzureLib
 
             try
             {
-                ItemResponse<CardCatagories> newCardResponse1 = await this._container.ReadItemAsync<CardCatagories>(newCardCategory.Id, new PartitionKey(newCardCategory.Catagory));
+                ItemResponse<CardCatagories> newCardResponse = await this._container.ReadItemAsync<CardCatagories>(newCardCategory.Id, new PartitionKey(newCardCategory.Cards));
             } 
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                ItemResponse<CardCatagories> cardCategoryResponse = await this._container.CreateItemAsync<CardCatagories>(newCardCategory, new PartitionKey(newCardCategory.Catagory));
+                ItemResponse<CardCatagories> newCardResponse = await this._container.CreateItemAsync<CardCatagories>(newCardCategory, new PartitionKey(newCardCategory.Cards));
+            }
+        }
+
+        public async Task AddCardIfDoesNotExist(CardCatagories c)
+        {
+            try
+            {
+                ItemResponse<CardCatagories> cardResponse = await this._container.ReadItemAsync<CardCatagories>(c.Catagory, new PartitionKey(c.Cards));
+            }
+            catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                ItemResponse<CardCatagories> cardResponse = await this._container.CreateItemAsync<CardCatagories>(c, new PartitionKey(c.Cards));
             }
         }
 
