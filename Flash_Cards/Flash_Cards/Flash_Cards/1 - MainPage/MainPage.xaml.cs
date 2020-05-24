@@ -2,9 +2,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MVVMBase;
-using System;
-using System.Xml.Serialization;
-using MyAzureLib;
 
 namespace Flash_Cards
 {
@@ -20,7 +17,6 @@ namespace Flash_Cards
             vm = new MainPageViewModel(this);
             BindingContext = vm;
             
-            //GetCategory();
             CatagoryListView.SelectionMode = ListViewSelectionMode.Single;
             CatagoryListView.ItemSelected += Catagory_ItemSelectedAsync;
 
@@ -28,16 +24,6 @@ namespace Flash_Cards
             //CatagoryListViewTemp.ItemSelected += Catagory_ItemSelectedAsync;
 
             AddButton.Clicked += AddButton_ClickedAsync;
-
-            MessagingCenter.Subscribe<AddCardPage, string>(this, "new", (sender, e) =>
-            {
-                DisplayAlert("Yay! New Catagory", e + " has been Added", "Ok");
-                //CatagoryCell newCard = new CatagoryCell(e, 0);
-
-                //vm.AddNewCard(newCard);
-            });
-
-            
         }
 
         private async void Catagory_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
@@ -45,6 +31,7 @@ namespace Flash_Cards
             if (e.SelectedItem == null) return;
 
             CatagoryCell itemString = (CatagoryCell)e.SelectedItem;
+
             await vm.ItemSelectionChangedAsync(card: itemString);
         }
 

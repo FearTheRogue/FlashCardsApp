@@ -26,8 +26,6 @@ namespace Flash_Cards
             SaveCardButton.Clicked += SaveCardButton_Clicked;
         }
 
-        //INavigation IPage.NavigationProxy => Navigation;
-
         public async Task TextPopup(string title, string message)
         {
             await DisplayAlert(title, message, "Dismiss");
@@ -42,8 +40,6 @@ namespace Flash_Cards
 
         private void SaveCardButton_Clicked(object sender, EventArgs e)
         {
-            //  MessagingCenter.Send(this,"new", text);
-
             Task.Run(async () =>
             {
                 await AddNewCard();

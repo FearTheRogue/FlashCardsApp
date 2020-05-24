@@ -16,14 +16,14 @@
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand" 
                    Padding="0,20,0,20"/>
+           
             
-            <Label
-                   Text="{Binding CategoryId}"
-                   FontSize="20"
+            <Label Text="{Binding ID}"
+                     FontSize="20"
                    VerticalOptions="Start"
                    HorizontalOptions="CenterAndExpand"/>
-
-            <ListView ItemsSource="{Binding CatagoryCards}"
+            
+            <ListView ItemsSource="{Binding ListQuestions}"
                       x:Name="CatagoryListView"
                       HorizontalOptions="Center"
                       HasUnevenRows="False"

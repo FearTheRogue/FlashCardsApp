@@ -1,6 +1,5 @@
 ﻿using MVVMBase;
 using MyAzureLib;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -94,7 +93,7 @@ namespace Flash_Cards
             await Navigation.PushAsync(nextPage);
             nextPage.Title = card.Catagory + " Catagory Page";
             string temp = card.Id.ToString();
-            MessagingCenter.Send(this, "new", temp);
+            MessagingCenter.Send(this, "new", card);
         }
 
         public void AddNewCard(CatagoryCell newCardString)

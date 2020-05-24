@@ -17,7 +17,6 @@ namespace MyAzureLib
         private Database _database;
         private Container _container;
 
-        // Creating Data
         public CosmosClient CosmosClientRef
         {
             get
@@ -60,7 +59,6 @@ namespace MyAzureLib
             
         }
 
-        // Create new Category
         public async Task AddCardToCategory(string id, string newTitle)
         {
             CardCatagories newCardCategory = new CardCatagories
@@ -122,7 +120,6 @@ namespace MyAzureLib
             this.container = await this.database.CreateContainerIfNotExistsAsync(this.containerID, "/Catagory", 400);
         }*/
 
-        // Read Data
         public async Task QueryItemsAsync(List<CardCatagories> temp)
         {
             var sqlQueryText = "SELECT * FROM c ORDER BY c.Catagory";

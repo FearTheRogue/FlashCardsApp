@@ -12,8 +12,6 @@ namespace Flash_Cards
         private readonly ThirdPageViewModel vm;
         private IMainPageHelper _viewHelper;
 
-        string passedId;
-
         public ThirdPage()
         {
             InitializeComponent();
@@ -21,13 +19,9 @@ namespace Flash_Cards
             vm = new ThirdPageViewModel(this);
             BindingContext = vm;
 
-            MessagingCenter.Subscribe<MainPageViewModel, string>(this, "new", async (sender, e) =>
+            MessagingCenter.Subscribe<MainPageViewModel, CatagoryCell>(this, "new", (sender, e) =>
             {
-                //CatagoryCell newCard = new CatagoryCell(e, 0);
-                //vm.AddNewCard(newCard);
-
-                await DisplayAlert("ID ", e, "Ok");
-                passedId = e;
+                vm.CategoryId = (CatagoryCell)e;
             });
         }
 
