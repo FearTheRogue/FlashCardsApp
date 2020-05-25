@@ -20,9 +20,6 @@ namespace Flash_Cards
             CatagoryListView.SelectionMode = ListViewSelectionMode.Single;
             CatagoryListView.ItemSelected += Catagory_ItemSelectedAsync;
 
-            //CatagoryListViewTemp.SelectionMode = ListViewSelectionMode.Single;
-            //CatagoryListViewTemp.ItemSelected += Catagory_ItemSelectedAsync;
-
             AddButton.Clicked += AddButton_ClickedAsync;
         }
 

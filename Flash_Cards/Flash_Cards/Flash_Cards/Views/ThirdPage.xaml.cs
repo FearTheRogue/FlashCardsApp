@@ -2,6 +2,7 @@
 using Xamarin.Forms.Xaml;
 using MVVMBase;
 using System.Threading.Tasks;
+using System;
 
 
 namespace Flash_Cards
@@ -26,6 +27,11 @@ namespace Flash_Cards
         }
 
         INavigation IPage.NavigationProxy => Navigation;
+
+        public void RefreshButton_Clicked(object sender, EventArgs e)
+        {
+            button.Text = vm.ListQuestions.Count.ToString();
+        }
 
         public void ScrollToObject(object obj)
         {

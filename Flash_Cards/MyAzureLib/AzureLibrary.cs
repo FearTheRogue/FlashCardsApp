@@ -98,6 +98,14 @@ namespace MyAzureLib
             }
         }
 
+        public async Task DeleteCategoryItemAsync(string categoryTitle, string id)
+        {
+            var partitionKeyValue = categoryTitle;
+            var categoryId = id;
+
+            ItemResponse<CardCatagories> itemResponse = await _container.DeleteItemAsync<CardCatagories>(categoryId, new PartitionKey(partitionKeyValue));
+        }
+
         /*
         public async Task Go()
         {

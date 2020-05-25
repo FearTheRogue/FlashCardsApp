@@ -32,14 +32,14 @@ namespace Flash_Cards
 
                 ID = _categoryid.Id;
 
-                CardQuestion = new string[_categoryid.Questions.Length];
+                
 
-                for (int i = 0; i < _categoryid.Questions.Length; i++)
-                {
-                    cardQuestion[i] = _categoryid.Questions[i].CardQuestion;
-                    //cardAnswer[i] = _categoryid.Answers[i].CardAnwser;
-                    ListQuestions.Add(cardQuestion[i].ToString());
-                }
+                //for (int i = 0; i < _categoryid.Questions.Length; i++)
+                //{
+                //    cardQuestion[i] = _categoryid.Questions[i].CardQuestion;
+                //    cardAnswer[i] = _categoryid.Answers[i].CardAnwser;
+                //    ListQuestions.Add(cardQuestion[i].ToString());
+                //}
 
             }
         }
@@ -87,15 +87,25 @@ namespace Flash_Cards
 
         public async Task Temp()
         {
-            //for (int i = 0; i < _categoryid.Questions.Length; i++)
-            //{
-            //    cardQuestion[i] = _categoryid.Questions[i].CardQuestion;
-            //    //cardAnswer[i] = _categoryid.Answers[i].CardAnwser;
-            //    ListQuestions.Add(cardQuestion[i].ToString());
-            //}
+            for (int i = 0; i < _categoryid.Questions.Length; i++)
+            {
+                cardQuestion[i] = _categoryid.Questions[i].CardQuestion;
+                //cardAnswer[i] = _categoryid.Answers[i].CardAnwser;
+                ListQuestions.Add(cardQuestion[i].ToString());
+            }
 
-           
+        }
 
+        public void GetTempTemp()
+        {
+            CardQuestion = new string[_categoryid.Questions.Length];
+
+            for (int i = 0; i < _categoryid.Questions.Length; i++)
+            {
+                cardQuestion[i] = _categoryid.Questions[i].CardQuestion;
+                //cardAnswer[i] = _categoryid.Answers[i].CardAnwser;
+                ListQuestions.Add(cardQuestion[i].ToString());
+            }
         }
 
         public ThirdPageViewModel(IMainPageHelper viewHelper) : base(viewHelper.NavigationProxy)
@@ -108,7 +118,6 @@ namespace Flash_Cards
             //{
             //    ListQuestions.Add(item.CardQuestion);
             //}
-        
 
             //ListQuestions.Add("Test");
 
@@ -123,7 +132,6 @@ namespace Flash_Cards
                  if (Answer == null) return;
 
              });*/
-
         }
     }
 }

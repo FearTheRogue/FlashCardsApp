@@ -170,7 +170,7 @@ namespace Flash_Cards
 
             //};
 
-            DeleteCommand = new Command<CatagoryCell>(execute: (c) => DeleteItem(c));
+            DeleteCommand = new Command<CatagoryCell>(execute: (c) => azure.DeleteCategoryItemAsync(c.Catagory, c.Id));
         }
     }
 }

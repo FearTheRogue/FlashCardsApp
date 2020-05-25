@@ -16,31 +16,23 @@
                    VerticalOptions="Start" 
                    HorizontalOptions="CenterAndExpand" 
                    Padding="0,20,0,20"/>
-           
-            
+
+            <Button Text="Refresh"
+                    Clicked="RefreshButton_Clicked"
+                    x:Name="button"/>
+
             <Label Text="{Binding ID}"
-                     FontSize="20"
+                   FontSize="20"
                    VerticalOptions="Start"
                    HorizontalOptions="CenterAndExpand"/>
-            
+
             <ListView ItemsSource="{Binding ListQuestions}"
                       HorizontalOptions="Center"
                       HasUnevenRows="False"
                       RowHeight="80"
                       VerticalOptions="CenterAndExpand"
                       IsPullToRefreshEnabled="True">
-                
             </ListView>
-                
-            <StackLayout Orientation="Vertical">
-                
-                <Label Text="Title"
-                       FontSize="20"
-                       VerticalOptions="Start"
-                       HorizontalOptions="CenterAndExpand"/>
-                
-            </StackLayout>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
