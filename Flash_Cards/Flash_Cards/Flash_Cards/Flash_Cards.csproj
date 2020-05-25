@@ -22,10 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="1 - MainPage\MainPage.xaml.cs">
+    <Compile Update="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="0 - StartUpPage\StartUpPage.xaml.cs">
+    <Compile Update="Views\StartUpPage.xaml.cs">
       <DependentUpon>StartUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="CatagoryViewCell.xaml.cs">
@@ -34,13 +34,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="4 - AddCardPage\AddCardPage.xaml">
+    <EmbeddedResource Update="Views\AddCardPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="1 - MainPage\MainPage.xaml">
+    <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="2 - ThirdPage\ThirdPage.xaml">
+    <EmbeddedResource Update="Views\ThirdPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="CardViewCell.xaml">
@@ -49,5 +49,9 @@
     <EmbeddedResource Update="CatagoryViewCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="4 - AddCardPage\" />
   </ItemGroup>
 </Project>
