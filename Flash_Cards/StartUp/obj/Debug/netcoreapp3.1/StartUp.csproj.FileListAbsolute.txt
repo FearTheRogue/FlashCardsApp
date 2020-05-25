@@ -4,3 +4,7 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netco
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.AssemblyInfo.cs
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.pdb
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.csprojAssemblyReference.cache
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.csproj.CoreCompileInputs.cache
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.AssemblyInfoInputs.cache
+C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\StartUp\obj\Debug\netcoreapp3.1\StartUp.AssemblyInfo.cs

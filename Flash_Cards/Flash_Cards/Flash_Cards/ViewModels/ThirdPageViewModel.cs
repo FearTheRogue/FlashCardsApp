@@ -33,6 +33,14 @@ namespace Flash_Cards
                 ID = _categoryid.Id;
 
                 CardQuestion = new string[_categoryid.Questions.Length];
+
+                for (int i = 0; i < _categoryid.Questions.Length; i++)
+                {
+                    cardQuestion[i] = _categoryid.Questions[i].CardQuestion;
+                    //cardAnswer[i] = _categoryid.Answers[i].CardAnwser;
+                    ListQuestions.Add(cardQuestion[i].ToString());
+                }
+
             }
         }
 
