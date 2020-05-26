@@ -16,19 +16,16 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
-        <Label Text="{Binding TitleString}"
-                   FontSize="30"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start"
-                   Padding="0,20,0,20"/>
-
         <ListView ItemsSource="{Binding AppCategories}"
                   x:Name="CatagoryListView"
                   SelectedItem="{Binding SelectedString}"
                   HorizontalOptions="Center"
                   HasUnevenRows="False"
                   RowHeight="80"
-                  VerticalOptions="Center">
+                  VerticalOptions="Center"
+                  IsPullToRefreshEnabled="True"
+                  Refreshing="CatagoryListView_Refreshing"
+                  RefreshCommand="{Binding RefreshCommand}">
            
 
             <ListView.ItemTemplate>

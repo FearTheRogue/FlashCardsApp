@@ -189,19 +189,19 @@ namespace Setup
             CardCatagories cardCatagory3 = new CardCatagories
             {
                 Id = "catagory.3",
-                Catagory = "OOP",
+                Catagory = "Artificial Intelligence",
                 CardCount = 3,
                 Questions = new Question[]
                 {
-                    new Question{CardQuestion = "OOP question 1"},
-                    new Question{CardQuestion = "OOP question 2"},
-                    new Question{CardQuestion = "OOP question 3"}
+                    new Question{CardQuestion = "AI question 1"},
+                    new Question{CardQuestion = "AI question 2"},
+                    new Question{CardQuestion = "AI question 3"}
                 },
                 Answers = new Answer[]
                 {
-                    new Answer{CardAnwser = "OOP answer 1"},
-                    new Answer{CardAnwser = "OOP answer 2"},
-                    new Answer{CardAnwser = "OOP answer 3"}
+                    new Answer{CardAnwser = "AI answer 1"},
+                    new Answer{CardAnwser = "AI answer 2"},
+                    new Answer{CardAnwser = "AI answer 3"}
                 },
             };
 
@@ -213,6 +213,34 @@ namespace Setup
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
                 ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory3, new PartitionKey(cardCatagory3.Catagory));
+                Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
+            }
+
+            CardCatagories cardCatagory4 = new CardCatagories
+            {
+                Id = "catagory.4",
+                Catagory = "Maths",
+                CardCount = 2,
+                Questions = new Question[]
+               {
+                    new Question{CardQuestion = "Maths question 1"},
+                    new Question{CardQuestion = "Maths question 2"}
+               },
+                Answers = new Answer[]
+               {
+                    new Answer{CardAnwser = "Maths answer 1"},
+                    new Answer{CardAnwser = "Maths answer 2"}
+               },
+            };
+
+            try
+            {
+                ItemResponse<CardCatagories> cardCatagory4Response = await this.container.ReadItemAsync<CardCatagories>(cardCatagory4.Id, new PartitionKey(cardCatagory4.Catagory));
+                Console.WriteLine("Item in database with id: {0} already exists\n", cardCatagory4Response.Resource.Id);
+            }
+            catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
+            {
+                ItemResponse<CardCatagories> cardCatagoryResponse = await this.container.CreateItemAsync<CardCatagories>(cardCatagory4, new PartitionKey(cardCatagory4.Catagory));
                 Console.WriteLine("Created item in database with ID: {0} Operation consumed {1} RUs.\n", cardCatagoryResponse.Resource.Id, cardCatagoryResponse.RequestCharge);
             }
         }

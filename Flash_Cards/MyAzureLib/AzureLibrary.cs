@@ -17,6 +17,12 @@ namespace MyAzureLib
         private Database _database;
         private Container _container;
 
+        public readonly string databaseID = "ListOfCardsDB";
+
+        public readonly string containerID = "Items";
+
+
+        // Creating DB if does not exist
         public CosmosClient CosmosClientRef
         {
             get
@@ -32,7 +38,7 @@ namespace MyAzureLib
             }
         }
 
-        public async Task<Database> GetDatabase() 
+        public async Task<Database> GetDatabase()
         {
             if (_database == null)
             {
@@ -51,14 +57,12 @@ namespace MyAzureLib
             return _container;
         }
 
-        public readonly string databaseID = "ListOfCardsDB";
-
-        public readonly string containerID = "Items";
         public AzureLibrary()
         {
-            
+
         }
 
+        // Create new card
         public async Task AddCardToCategory(string id, string newTitle)
         {
             CardCatagories newCardCategory = new CardCatagories
@@ -68,66 +72,26 @@ namespace MyAzureLib
                 CardCount = 0,
                 Questions = new Question[]
                 {
-                    new Question{CardQuestion = "new question"}
+                    new Question{CardQuestion = "new Category Created"}
                 },
                 Answers = new Answer[]
                 {
-                    new Answer{CardAnwser = "new answer"}
-                },
+                    new Answer{CardAnwser = "new Category Created"}
+                }
             };
 
             try
             {
-                ItemResponse<CardCatagories> newCardResponse = await this._container.ReadItemAsync<CardCatagories>(newCardCategory.Id, new PartitionKey(newCardCategory.Cards));
-            } 
-            catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
-            {
-                ItemResponse<CardCatagories> newCardResponse = await this._container.CreateItemAsync<CardCatagories>(newCardCategory, new PartitionKey(newCardCategory.Cards));
-            }
-        }
-
-        public async Task AddCardIfDoesNotExist(CardCatagories c)
-        {
-            try
-            {
-                ItemResponse<CardCatagories> cardResponse = await this._container.ReadItemAsync<CardCatagories>(c.Catagory, new PartitionKey(c.Cards));
+                ItemResponse<CardCatagories> newCardResponse = await this._container.ReadItemAsync<CardCatagories>(newCardCategory.Id, new PartitionKey(newCardCategory.Catagory));
             }
             catch (CosmosException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                ItemResponse<CardCatagories> cardResponse = await this._container.CreateItemAsync<CardCatagories>(c, new PartitionKey(c.Cards));
+                ItemResponse<CardCatagories> newCardResponse = await this._container.CreateItemAsync<CardCatagories>(newCardCategory, new PartitionKey(newCardCategory.Catagory));
             }
         }
 
-        public async Task DeleteCategoryItemAsync(string categoryTitle, string id)
-        {
-            var partitionKeyValue = categoryTitle;
-            var categoryId = id;
 
-            ItemResponse<CardCatagories> itemResponse = await _container.DeleteItemAsync<CardCatagories>(categoryId, new PartitionKey(partitionKeyValue));
-        }
-
-        /*
-        public async Task Go()
-        {
-            this.cosmosClient = new CosmosClient(EndPointURL, PrimaryKey, new CosmosClientOptions()
-            {
-                ApplicationName = "ListOfCards"
-            });
-
-            //await CheckDatabaseAsync();
-            //await CheckContainerAsync();
-        }*/
-
-        // Creating db and container
-        /*public async Task CheckDatabaseAsync()
-        {
-            this.database = await this.cosmosClient.CreateDatabaseIfNotExistsAsync(this.databaseID);
-        }
-        public async Task CheckContainerAsync()
-        {
-            this.container = await this.database.CreateContainerIfNotExistsAsync(this.containerID, "/Catagory", 400);
-        }*/
-
+        // Reading in categories from DB
         public async Task QueryItemsAsync(List<CardCatagories> temp)
         {
             var sqlQueryText = "SELECT * FROM c ORDER BY c.Catagory";
@@ -144,6 +108,15 @@ namespace MyAzureLib
                     temp.Add(catagories);
                 }
             }
+        }
+
+        // Deleting a selected Category
+        public async Task DeleteCategoryItemAsync(string categoryTitle, string id)
+        {
+            var partitionKeyValue = categoryTitle;
+            var categoryId = id;
+
+            ItemResponse<CardCatagories> itemResponse = await _container.DeleteItemAsync<CardCatagories>(categoryId, new PartitionKey(partitionKeyValue));
         }
     }
 }

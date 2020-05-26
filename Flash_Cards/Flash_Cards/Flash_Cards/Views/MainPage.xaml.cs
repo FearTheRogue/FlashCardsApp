@@ -2,6 +2,9 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MVVMBase;
+using System;
+using MyAzureLib;
+using System.Threading;
 
 namespace Flash_Cards
 {
@@ -32,11 +35,6 @@ namespace Flash_Cards
             await vm.ItemSelectionChangedAsync(card: itemString);
         }
 
-        private async void GetCategory()
-        {
-            await vm.Temp();
-        }
-
         INavigation IPage.NavigationProxy => Navigation;
 
         public async Task TextPopup (string title, string message)
@@ -52,6 +50,25 @@ namespace Flash_Cards
         public void ScrollToObject(object obj)
         {
             CatagoryListView.ScrollTo(obj, ScrollToPosition.End, true);
+        }
+
+        private async void CatagoryListView_Refreshing(object sender, System.EventArgs e)
+        { 
+            CatagoryListView.ItemsSource = null;
+
+            // Clearing the data from both collections
+            vm._appCategories.Clear();
+            vm._list.Clear();
+
+            CatagoryListView.ItemsSource = vm._appCategories;
+
+            // Retrieving data from DB
+            await vm.GetCategoriesFromDB();
+
+            // Inputting data to Collection
+            vm.InputDataToCollection();
+
+            CatagoryListView.IsRefreshing = false;
         }
     }
 }

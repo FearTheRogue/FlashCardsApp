@@ -5,6 +5,7 @@ using Xamarin.Forms.Xaml;
 using MVVMBase;
 using MyAzureLib;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Flash_Cards
 {
@@ -12,7 +13,7 @@ namespace Flash_Cards
     public partial class AddCardPage : ContentPage
     {
         public AzureLibrary azure;
-        public List<CatagoryCell> cell = new List<CatagoryCell>();
+        public ObservableCollection<CatagoryCell> cell = new ObservableCollection<CatagoryCell>();
 
         public AddCardPage()
         {
@@ -34,18 +35,21 @@ namespace Flash_Cards
         public async Task AddNewCard()
         {
             string text = CatagoryTitle.Text;
-
-            await azure.AddCardToCategory("category." + (cell.Count + 1), text);
+           
+            await azure.AddCardToCategory("catagory." + (cell.Count + 1), text);
         }
 
-        private void SaveCardButton_Clicked(object sender, EventArgs e)
+        private async void SaveCardButton_Clicked(object sender, EventArgs e)
         {
-            Task.Run(async () =>
+            if (CatagoryTitle.Text == null)
+            {
+                await DisplayAlert("Oops!", "You must enter a category title", "Ok");
+            }
+            else
             {
                 await AddNewCard();
-            }).Wait();
-
-            Navigation.PopAsync();
+                await Navigation.PopAsync();
+            }  
         } 
     }
 }

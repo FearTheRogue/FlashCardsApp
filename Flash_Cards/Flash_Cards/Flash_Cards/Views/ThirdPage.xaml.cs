@@ -11,7 +11,6 @@ namespace Flash_Cards
     public partial class ThirdPage : ContentPage, IMainPageHelper
     {
         private readonly ThirdPageViewModel vm;
-        private IMainPageHelper _viewHelper;
 
         public ThirdPage()
         {
@@ -28,11 +27,6 @@ namespace Flash_Cards
 
         INavigation IPage.NavigationProxy => Navigation;
 
-        public void RefreshButton_Clicked(object sender, EventArgs e)
-        {
-            button.Text = vm.ListQuestions.Count.ToString();
-        }
-
         public void ScrollToObject(object obj)
         {
             throw new System.NotImplementedException();
@@ -48,6 +42,7 @@ namespace Flash_Cards
             throw new System.NotImplementedException();
         }
 
+        // Not implemented. Would have been used on the question flash cards
         public async Task<bool> ShowQuestion(string title, string message)
         {
             bool answer = await DisplayAlert(title, message, "Show Answer", "Back to cards");

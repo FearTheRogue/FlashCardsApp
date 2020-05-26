@@ -15,26 +15,10 @@ namespace Flash_Cards
     public partial class StartUp : ContentPage
     {
         public AzureLibrary _library;
-        //List<MyAzureLib.CardCatagories> cat = new List<MyAzureLib.CardCatagories>();
-
-        //public AzureLibrary Library
-        //{
-        //    get => _library;
-        //    set
-        //    {
-        //        if (_library != value)
-        //        {
-        //            _library = value;
-        //            OnPropertyChanged();
-        //        }
-        //    }
-        //}
 
         public StartUp()
         {
             InitializeComponent();
-
-            //Check();
 
             _library = SingletonModel.SingletonInstance.Library;
 
@@ -48,17 +32,11 @@ namespace Flash_Cards
             await _library.GetContainer();
         }
 
-        private async Task GetCategories()
-        {
-           // await _library.QueryItemsAsync(cat);
-        }
-
         private async void ContButton_Clicked(object sender, EventArgs e)
         {  
             Spinner.IsRunning = true;
 
             await WaitCreate();
-            //await GetCategories();
 
             Spinner.IsRunning = false;
 

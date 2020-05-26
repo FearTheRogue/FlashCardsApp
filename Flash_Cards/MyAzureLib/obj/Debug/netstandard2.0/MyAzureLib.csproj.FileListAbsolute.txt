@@ -10,15 +10,3 @@ C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\ne
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.dll
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.pdb
 C:\Users\Ryan\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.csprojAssemblyReference.cache
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\bin\Debug\netstandard2.0\Microsoft.Azure.Documents.ServiceInterop.dll
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\bin\Debug\netstandard2.0\Cosmos.CRTCompat.dll
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\bin\Debug\netstandard2.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\bin\Debug\netstandard2.0\MyAzureLib.deps.json
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\bin\Debug\netstandard2.0\MyAzureLib.dll
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\bin\Debug\netstandard2.0\MyAzureLib.pdb
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.csprojAssemblyReference.cache
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.csproj.CoreCompileInputs.cache
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.AssemblyInfoInputs.cache
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.AssemblyInfo.cs
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.dll
-C:\Users\coypu\Documents\GitHub\FlashCardsApp\Flash_Cards\MyAzureLib\obj\Debug\netstandard2.0\MyAzureLib.pdb

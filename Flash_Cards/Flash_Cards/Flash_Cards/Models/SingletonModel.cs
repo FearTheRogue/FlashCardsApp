@@ -1,6 +1,7 @@
 ﻿using MyAzureLib;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -11,11 +12,11 @@ namespace Flash_Cards
     {
         private static SingletonModel model;
         private AzureLibrary _library;
-        private List<CatagoryCell> _categories;
-        private Question _question;
+        private ObservableCollection<CatagoryCell> _categories;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        // Stores DB info 
         public AzureLibrary Library
         {
             get => _library;
@@ -27,7 +28,8 @@ namespace Flash_Cards
             }
         }
 
-        public List<CatagoryCell> Categories 
+        // Stores Data from DB to a collection
+        public ObservableCollection<CatagoryCell> Categories 
         {
             get => _categories;
             set
@@ -35,17 +37,6 @@ namespace Flash_Cards
                 if (_categories == value) return;
                 _categories = value;
 
-                OnPropertyChanged();
-            }
-        }
-
-        public Question Question
-        {
-            get => _question;
-            set
-            {
-                if (_question == value) return;
-                _question = value;
                 OnPropertyChanged();
             }
         }

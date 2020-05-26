@@ -28,21 +28,19 @@
                    FontSize="15"
                    Padding="20,0,10,0"/>
             
-            <StackLayout Orientation="Horizontal" Padding="0,10,0,20" BackgroundColor="Red">
+            <StackLayout Orientation="Horizontal" Padding="0,10,0,20">
 
                 <Label Text="Title: "
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
                        FontSize="25"
-                       BackgroundColor="Green"
                        Padding="20,0,10,0"/>
 
                 <Entry x:Name="CatagoryTitle"
                        FontSize="25"
                        Placeholder="Enter new Title"
                        VerticalOptions="Center"
-                       HorizontalOptions="FillAndExpand"
-                       BackgroundColor="Yellow">
+                       HorizontalOptions="FillAndExpand">
                 </Entry>
 
             </StackLayout>
